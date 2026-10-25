@@ -9,6 +9,9 @@ node_modules/
 dist/
 build/
 
+# Reportes que genera la ingesta (se regeneran con: npm run cargar -- --seco)
+ingesta/reportes/
+
 # Logs
 *.log
 

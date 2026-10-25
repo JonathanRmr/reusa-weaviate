@@ -1,0 +1,21 @@
+codigoA,codigoB,relacion,nota
+REU-E001,REU-E061,republicacion,Mismo calefactor electrico reescrito sin mayusculas ni datos de contacto
+REU-E002,REU-E062,republicacion,Nevera de 92 litros republicada como tipo minibar
+REU-E008,REU-E063,republicacion,Sofa de 3 puestos en tela gris descrito como mueble de sala
+REU-E009,REU-E064,republicacion,Closet de madera republicado como armario para guardar ropa
+REU-E015,REU-E065,republicacion,Portatil Lenovo i5 con las especificaciones escritas en palabras
+REU-E016,REU-E066,republicacion,iPhone 13 Pro Max publicado como Celular Apple
+REU-E021,REU-E067,republicacion,Bicicleta rin 29 republicada como bici montañera
+REU-E027,REU-E068,republicacion,Taladro percutor de media pulgada con el mismo maletin y brocas
+REU-E030,REU-E069,republicacion,Guitarra de cuerdas de nylon con el mismo estuche y capotraste
+REU-E041,REU-E070,republicacion,Moto 125 modelo 2019 con los mismos kilometros y papeles
+REU-E003,REU-E004,distinto,Lavadora y estufa a gas: misma categoria articulos distintos
+REU-E005,REU-E006,distinto,Microondas y licuadora: misma categoria articulos distintos
+REU-E010,REU-E011,distinto,Escritorio y comedor: misma categoria articulos distintos
+REU-E012,REU-E013,distinto,Cama doble y biblioteca: misma categoria articulos distintos
+REU-E017,REU-E018,distinto,Monitor e impresora: misma categoria articulos distintos
+REU-E019,REU-E020,distinto,Teclado mecanico y televisor: misma categoria articulos distintos
+REU-E022,REU-E023,distinto,Caminadora y mancuernas: misma categoria articulos distintos
+REU-E028,REU-E029,distinto,Pulidora y caja de herramientas: misma categoria articulos distintos
+REU-E036,REU-E038,distinto,Guacal para perro y acuario: misma categoria articulos distintos
+REU-E044,REU-E045,distinto,Alfombra y cortinas blackout: misma categoria articulos distintos
