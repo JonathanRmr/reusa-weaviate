@@ -40,6 +40,10 @@ npm run cargar              # ingesta real
 npm run consultar           # nearText de control con sus distancias
 ```
 
+El catálogo son **280 publicaciones** en `datos/semilla.csv`, 70 por integrante, de las que 272
+superan la limpieza. El pipeline y sus cifras están en
+[`docs/informe-datos.md`](docs/informe-datos.md).
+
 Detalle de cada comando en [`ingesta/README.md`](ingesta/README.md) y las decisiones de diseño en
 [`docs/esquema.md`](docs/esquema.md).
 
@@ -60,10 +64,13 @@ ingestados, así que coinciden con lo que devolverá la búsqueda de verdad.
 
 | Fase | Responsable | Estado |
 |---|---|---|
-| 1 — Esquema, limpieza e ingesta | Edwar | Funcionando contra el clúster: colección creada y catálogo cargado |
+| 1 — Esquema, limpieza e ingesta | Edwar | **Completa.** 272 publicaciones ingestadas y verificadas; clave de solo lectura creada |
 | 2 — Backend, contrato e infraestructura | Johnatan | Contrato firmado y Express en pie con *stubs* |
 | 3 — Motor de consultas y evaluación | Alejandro | Pendiente |
 | 4 — Frontend y presentación | David | Pendiente |
 | 5 — Contenerización | David | Pendiente |
 
 > La sección "Para evaluar este proyecto" (`docker compose up`) la añade David en la Fase 5.7.
+
+La clave de **solo lectura** para el perfil `nube` de ese compose ya está creada y verificada: no
+puede escribir, ni borrar, ni crear colecciones (ver [`docs/esquema.md`](docs/esquema.md) §5).

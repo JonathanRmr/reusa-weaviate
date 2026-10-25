@@ -9,7 +9,9 @@
     "esquema": "tsx src/esquema.ts",
     "cargar": "tsx src/cargar.ts",
     "consultar": "tsx src/consultar.ts",
-    "test": "tsx --test src/*.test.ts"
+    "test": "tsx --test src/*.test.ts",
+    "rol-lectura": "tsx src/rol-lectura.ts",
+    "probar-lectura": "tsx src/probar-lectura.ts"
   },
   "dependencies": {
     "csv-parse": "7.0.3",

@@ -23,6 +23,10 @@ cp ../.env.example ../.env     # y poner WEAVIATE_URL y WEAVIATE_API_KEY
 | `npm run cargar` | Ingesta real, en lotes de 50 | sí, ~1 por objeto |
 | `npm run consultar` | Conteo + `nearText` de control con sus distancias | sí, 1 por consulta |
 | `npm run consultar -- --similares=REU-E001` | Ensayo del detector de republicaciones | sí, 1 |
+| `npm run rol-lectura` | Crea el rol RBAC de solo lectura sobre `Publicacion` | no |
+| `npm run rol-lectura -- --clave` | Emite la API key de solo lectura para el compose | no |
+| `npm run rol-lectura -- --rotar` | Emite una clave nueva e invalida la anterior | no |
+| `CLAVE_LECTURA=xxx npm run probar-lectura` | Comprueba que esa clave no puede escribir | sí, 1 |
 
 El plan gratuito da **2.000 peticiones de embeddings al día**: por eso el modo `--seco` existe y por
 eso conviene usarlo mientras se ajusta la limpieza.
@@ -43,5 +47,7 @@ src/cliente.ts       conexión única a Weaviate y lectura de configuración
 src/esquema.ts       creación de la colección
 src/cargar.ts        ingesta por lotes
 src/consultar.ts     verificación con nearText y nearObject
+src/rol-lectura.ts   rol y clave de solo lectura (roadmap 5.1)
+src/probar-lectura.ts  comprueba que la clave publicada es inofensiva
 reportes/            generado, no versionado
 ```

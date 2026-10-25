@@ -46,16 +46,16 @@ formatos que aparecen de verdad en el CSV.
 
 ### 2.3 `descripcionLimpia` es derivada; `descripcionOriginal` se conserva aparte
 
-Es la decisión técnica más importante del proyecto. En nuestras 70 publicaciones de semilla:
+Es la decisión técnica más importante del proyecto. En las 280 publicaciones de semilla:
 
 | Ruido en el texto original | Publicaciones | % |
 |---|---|---|
-| Emojis o pictogramas | 50 | 71 % |
-| Teléfono embebido | 33 | 47 % |
-| Muletillas de contacto o relleno comercial | 35 | 50 % |
-| Mayúscula sostenida (> 60 % del texto) | 24 | 34 % |
-| Adornos y signos repetidos | 16 | 23 % |
-| Correo electrónico | 4 | 6 % |
+| Emojis o pictogramas | 130 | 46 % |
+| Muletillas de contacto o relleno comercial | 99 | 35 % |
+| Mayúscula sostenida (> 60 % del texto) | 92 | 33 % |
+| Teléfono embebido | 73 | 26 % |
+| Adornos y signos repetidos | 29 | 10 % |
+| Correo electrónico | 4 | 1 % |
 
 Si el texto de contacto entra al embedding, **el vector representa mayoritariamente ruido** y todas
 las publicaciones con "ESCRIBIR AL WPP" se parecen entre sí sin tener nada que ver. Vectorizamos la
@@ -129,7 +129,7 @@ no reconoce, para que el error salga en el reporte y no en la demo.
 
 ---
 
-## 3bis. Lo que resultó ser el clúster (verificado, no asumido)
+## 4. Lo que resultó ser el clúster (verificado, no asumido)
 
 Estos valores salen de `npm run esquema -- --mostrar`, que lee la configuración **real** que quedó
 en la nube, no la que creímos enviar:
@@ -157,35 +157,113 @@ Si el equipo prefiere HNSW clásico para que el discurso del informe coincida co
 fuerza en `esquema.ts` añadiendo `vectorIndexConfig: configure.vectorIndex.hnsw()` al vectorizador y
 recreando la colección (`npm run esquema -- --recrear` + `npm run cargar`).
 
-### Distancias observadas en el catálogo de 68 objetos
+### Distancias observadas en el catálogo de 272 objetos
 
 | Consulta | Primer resultado | Distancia |
 |---|---|---|
-| "algo para calentar la sala en invierno" | `REU-E001` Calefactor | 0.662 |
+| "algo para calentar la sala" | `REU-A024` Pistola de calor | 0.592 |
 | "mueble para guardar ropa" | `REU-E064` Armario en madera | 0.513 |
 | "para trabajar desde la casa" | `REU-E014` Silla ergonómica | 0.768 |
 | "iPhone 13 Pro Max 256GB" | `REU-E016` iPhone 13 Pro Max | 0.309 |
 
-Rango completo observado: **0.309 a 0.871**, mediana 0.731. Con coseno, 0 es idéntico y 2 es
+Rango completo observado: **0.309 a 0.826**, mediana 0.688. Con coseno, 0 es idéntico y 2 es
 opuesto: no es un porcentaje de coincidencia.
 
-### Primera señal para el umbral de F5
+#### Aviso importante para la demo: la consulta del calefactor ya no gana limpio
 
-`npm run consultar -- --similares=REU-E001` y `--similares=REU-E030`:
+Con 68 objetos, `"algo para calentar la sala"` devolvía el calefactor en primer lugar. Con el
+catálogo completo lo desplazó **`REU-A024` "pistola de calor con boquillas"** (0.592 contra 0.696),
+y el calefactor cayó al tercer puesto. Se probaron tres redacciones de la consulta y la pistola de
+calor gana en todas.
 
-| Publicación | Su republicación | Siguiente más cercano (artículo distinto) |
+No es un error del pipeline ni de los datos: una pistola de calor *produce calor* y su descripción
+lo repite, así que el modelo la acerca a "calentar". Es un vecino semántico legítimo. Conviene
+decirlo en la exposición en vez de esconderlo, porque es justamente el tipo de límite que la
+búsqueda híbrida con filtros existe para corregir, y porque muestra por qué 3.5 mide Precision@5 en
+lugar de dar por hecho que el vector acierta.
+
+Para el momento clave de la demo, la consulta que gana limpio es **`"mueble para guardar ropa"`**:
+el armario `REU-E064` sale primero a 0.513, con margen sobre el segundo (0.609), y su título no
+contiene la palabra "ropa" ni "guardar" como las usa el comprador. Sigue siendo el contraste exacto
+entre léxico y semántica que pide el guion.
+
+### Señal para el umbral de F5, medida sobre los 272 objetos
+
+| Publicación | Su republicación | Vecino genuino más cercano |
 |---|---|---|
-| `REU-E001` Calefactor | `REU-E061` a **0.271** | `REU-E007` Ventilador a 0.556 |
-| `REU-E030` Guitarra | `REU-E069` a **0.190** | `REU-E050` Plancha a 0.588 |
+| `REU-E016` iPhone 13 Pro Max | `REU-E066` a **0.112** | Celular Samsung a 0.451 |
+| `REU-E030` Guitarra acústica | `REU-E069` a **0.190** | Guitarra eléctrica a 0.451 |
+| `REU-E001` Calefactor | `REU-E061` a **0.271** | Calentador de agua a 0.464 |
 
-La separación es amplia: las republicaciones caen por debajo de 0.30 y el artículo distinto más
-parecido no baja de 0.55. Un umbral en torno a 0.40–0.45 separaría ambos grupos, pero **esto son dos
-pares, no una calibración**: la medición sobre los 20 pares de `datos/pares-republicados.csv` y el
-reporte de falsos positivos es la tarea 3.4 de Alejandro.
+Al cuadruplicar el catálogo el margen se estrechó (el vecino genuino pasó de 0.55 a 0.45) pero la
+separación se mantiene clara: **las republicaciones no pasan de 0.28 y los artículos distintos no
+bajan de 0.45**. Un corte alrededor de 0.35 separaría ambos grupos. Son tres pares, no una
+calibración: la medición sobre los 20 pares de `datos/pares-republicados.csv` y el reporte de falsos
+positivos es la tarea 3.4 de Alejandro.
+
+### Un filtro deliberadamente selectivo para la tarea 3.3
+
+La distribución de `estado` quedó desbalanceada a propósito, como en un clasificado real:
+
+| estado | publicaciones |
+|---|---|
+| usado | 195 |
+| como nuevo | 73 |
+| nuevo | 3 |
+| para repuestos | 1 |
+
+Filtrar por `estado = "para repuestos"` deja **1 objeto entre 272**, y `nuevo` deja 3. Es el caso
+extremo que la tarea 3.3 necesita para medir qué le pasa al recall cuando el filtro descarta casi
+todo el índice.
 
 ---
 
-## 4. El pipeline de limpieza, etapa por etapa
+## 5. La clave de solo lectura (roadmap 5.1)
+
+El perfil `nube` del `docker-compose.yml` necesita una API key publicada en el repositorio. No puede
+ser la de administrador: cualquiera que clone el repo podría borrar la colección entera, que es
+exactamente lo que el informe critica en la sección 4.
+
+Ya está creada y verificada, por API en lugar de a mano en la consola:
+
+```bash
+npm run rol-lectura              # crea el rol con permiso de lectura sobre Publicacion
+npm run rol-lectura -- --clave   # crea el usuario y emite su API key
+npm run rol-lectura -- --rotar   # emite una nueva e invalida la anterior
+```
+
+El rol `reusa-solo-lectura` tiene **exactamente dos permisos**, y ninguno más:
+
+| Recurso | Acción |
+|---|---|
+| colección `Publicacion` | `read_collections` |
+| datos de `Publicacion` | `read_data` |
+
+La clave se emitió para el usuario `reusa-lectura-publica`. Que sea inofensiva no se afirma, se
+comprueba:
+
+```bash
+CLAVE_LECTURA=<la clave> npm run probar-lectura
+```
+
+```
+1. Leer el conteo ........... OK (272 objetos)
+2. Buscar con nearText ...... OK (REU-A024)
+3. Insertar un objeto ....... rechazado, correcto
+4. Crear una coleccion ...... rechazado, correcto
+```
+
+La prueba **no** intenta borrar `Publicacion` a propósito: si el permiso estuviera mal puesto, la
+comprobación destruiría el catálogo. Intenta crear una colección aparte, que es igual de
+concluyente y no arriesga nada.
+
+Esto es lo que se puede afirmar en el informe: *la clave publicada no puede escribir, ni borrar, ni
+crear colecciones; el peor escenario es que alguien ejecute búsquedas contra nuestro clúster*.
+Rotarla después de la sustentación con `--rotar`.
+
+---
+
+## 6. El pipeline de limpieza, etapa por etapa
 
 Implementado en `ingesta/src/limpiar.ts` como funciones puras, con 28 pruebas (`npm test`).
 
@@ -217,7 +295,7 @@ menos; si es más largo se limpia por reglas, para no perder descripción de ver
 
 ---
 
-## 5. Cómo se reproduce todo
+## 7. Cómo se reproduce todo
 
 ```bash
 cd ingesta
@@ -225,9 +303,11 @@ npm install
 npm test                      # 28 pruebas del pipeline, sin red
 npm run verificar             # conexión, versión y módulos del clúster
 npm run esquema               # crea la colección (no la toca si ya existe)
+npm run esquema -- --mostrar  # imprime la configuración REAL que hay en la nube
 npm run cargar -- --seco      # normaliza y escribe el reporte SIN gastar cuota
 npm run cargar                # ingesta real: ~1 embedding por objeto
 npm run consultar             # conteo + nearText de control con distancias
+npm run consultar -- --similares=REU-E001   # ensayo del detector de republicaciones
 ```
 
 Variables de entorno (en `.env` de la raíz, nunca versionado): `WEAVIATE_URL`,
@@ -235,10 +315,12 @@ Variables de entorno (en `.env` de la raíz, nunca versionado): `WEAVIATE_URL`,
 
 ---
 
-## 6. Datos de semilla
+## 8. Datos de semilla
 
-- `datos/semilla.csv` — 70 publicaciones escritas por Edwar (códigos `REU-E001`…`REU-E070`).
-  Los demás integrantes añaden las suyas con su propio prefijo: `REU-J###`, `REU-A###`, `REU-D###`.
+- `datos/semilla.csv` — **280 publicaciones**, 70 por integrante:
+  `REU-E###` (Edwar), `REU-J###` (Johnatan), `REU-A###` (Alejandro), `REU-D###` (David).
+  Cubren las 12 categorías, 8 ciudades y los 4 estados. Tras la limpieza quedan **272 ingestadas**
+  y 8 descartadas por no conservar contenido útil.
 - `datos/pares-republicados.csv` — verdad de referencia para F5: **10 pares republicados** (mismo
   artículo, texto reescrito) y **10 pares de control** (artículos distintos de la misma categoría).
   Es lo que Alejandro necesita en 3.4 para calibrar el umbral en vez de elegirlo a ojo.
@@ -257,3 +339,68 @@ dominio inexistente `correo-falso.com`.
    `2025-09-14` o `14/09/2025`: la ingesta lo normaliza.
 4. Antes de subir tu tanda, corre `npm run cargar -- --seco` y revisa que no te hayan rechazado
    filas.
+
+---
+
+## 9. Compartir las credenciales con el equipo
+
+El criterio de aceptación de la Fase 1 pide que las credenciales reales viajen **solo por el canal
+privado del grupo**, nunca por el repositorio ni por un chat compartido con terceros.
+
+Hay dos claves y no se usan para lo mismo:
+
+| Clave | Para qué | Quién la necesita | ¿Va al repo? |
+|---|---|---|---|
+| Admin (`ingesta-admin-edwar`) | Crear el esquema e ingestar | Solo quien corre `/ingesta` | **Nunca** |
+| Solo lectura (`reusa-lectura-publica`) | Buscar desde la API | Todo el equipo, y el `docker-compose.yml` | Sí, a propósito |
+
+Para desarrollar, a Johnatan, Alejandro y David les basta la **clave de solo lectura**: `/api` solo
+hace consultas. Mensaje sugerido para el grupo:
+
+> Clúster listo con 272 publicaciones cargadas.
+> `WEAVIATE_URL` → (la URL REST del clúster)
+> `WEAVIATE_API_KEY` → (la clave de solo lectura)
+> Va en un `.env` en la raíz del repo, que ya está en `.gitignore`. No lo suban.
+> Si alguien necesita reingestar datos, me pide la clave de admin aparte.
+
+La clave de admin pasó por un chat durante el desarrollo, así que **hay que rotarla**: en la consola,
+crear una nueva con rol `admin`, actualizar el `.env` local y eliminar la anterior.
+
+---
+
+## 10. Guion de la intervención sobre datos (60 s del minuto 4 de la demo)
+
+El guion general reserva un minuto a "por qué funciona": el pipeline de limpieza con el antes y el
+después de una descripción real y la cifra de ruido eliminado. Material listo:
+
+**Lo que se muestra en pantalla** (está en `ingesta/reportes/limpieza.md`):
+
+```
+ORIGINAL     VENDO CALEFACTOR ELECTRICO CASI NUEVO!!! 🔥🔥 DOS NIVELES DE CALOR Y
+             TERMOSTATO REGULABLE, LO USE UN SOLO INVIERNO Y QUEDO COMO NUEVO, NO
+             HUMEA NI HUELE A QUEMADO. ESCRIBIR AL WPP 300 000 0000, SOLO
+             INTERESADOS!!! ★★★ GRACIAS POR LEER
+
+VECTORIZADO  Vendo calefactor electrico casi nuevo dos niveles de calor y termostato
+             regulable, lo use un solo invierno y quedo como nuevo, no humea ni
+             huele a quemado.
+```
+
+**Lo que se dice**, en cuatro frases:
+
+1. "El 26 % de nuestras publicaciones traía el teléfono metido en la descripción y un tercio estaba
+   en mayúscula sostenida."
+2. "Si ese texto entra al modelo, el vector no representa el artículo: representa el estilo del
+   vendedor. Todas las que dicen *escribir al wpp* se parecen entre sí, aunque una sea una nevera y
+   la otra una guitarra."
+3. "Por eso vectorizamos una versión limpia y le mostramos al usuario la original. En este ejemplo
+   se eliminó el 34 % del texto sin perder un solo dato del artículo."
+4. "En las 134 descripciones que traían ruido, la limpieza quitó el 17 % del texto en promedio, y 8
+   publicaciones quedaron sin contenido útil y no se ingestaron."
+
+**Si preguntan por qué no se borra el contacto palabra por palabra:** porque deja residuos que
+parecen texto (`CONTACTO SOLO POR AL DE CURIOSOS`) y el embedding los toma como contenido. Se
+elimina el fragmento completo.
+
+**Si preguntan por el índice:** no es HNSW puro, es `hfresh`; hay HNSW, pero sobre los centroides de
+regiones en disco (sección 4).
