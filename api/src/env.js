@@ -12,7 +12,9 @@ for (const ruta of [resolve(AQUI, '..', '.env'), resolve(AQUI, '..', '..', '.env
   if (existsSync(ruta)) dotenv.config({ path: ruta });
 }
 
-const REQUERIDAS = ['WEAVIATE_URL', 'WEAVIATE_API_KEY'];
+const url = process.env.WEAVIATE_URL?.trim();
+const esLocal = url && !url.includes('weaviate.cloud') && !url.includes('weaviate.network');
+const REQUERIDAS = esLocal ? ['WEAVIATE_URL'] : ['WEAVIATE_URL', 'WEAVIATE_API_KEY'];
 
 function morirPorConfigFaltante(variable) {
   console.error(

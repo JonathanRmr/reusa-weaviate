@@ -16,6 +16,7 @@ async function crearConexion() {
   }
 
   // Soporte para Weaviate autoalojado / local en Docker (Roadmap 5.6)
+  // En modo local Weaviate opera con acceso anónimo (sin OIDC ni ApiKey)
   const parsed = new URL(env.weaviateUrl);
   return await weaviate.connectToCustom({
     httpHost: parsed.hostname,
@@ -24,7 +25,6 @@ async function crearConexion() {
     grpcHost: parsed.hostname,
     grpcPort: 50051,
     grpcSecure: false,
-    authCredentials: new ApiKey(env.weaviateApiKey),
   });
 }
 

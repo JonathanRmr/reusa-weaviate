@@ -40,7 +40,7 @@ services:
       - WEAVIATE_API_KEY=${WEAVIATE_API_KEY:-reusa-solo-lectura}
       - CORS_ORIGIN=*
     healthcheck:
-      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:3001/api/salud || exit 1"]
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://127.0.0.1:3001/api/salud || exit 1"]
       interval: 5s
       timeout: 5s
       retries: 15

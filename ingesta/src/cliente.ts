@@ -33,10 +33,11 @@ export type Config = {
 export function leerConfig(): Config {
   const url = process.env.WEAVIATE_URL?.trim();
   const apiKey = process.env.WEAVIATE_API_KEY?.trim();
+  const esLocal = url && !url.includes('weaviate.cloud') && !url.includes('weaviate.network');
 
   const faltantes = [
     ['WEAVIATE_URL', url],
-    ['WEAVIATE_API_KEY', apiKey],
+    ...(esLocal ? [] : [['WEAVIATE_API_KEY', apiKey]]),
   ]
     .filter(([, valor]) => !valor)
     .map(([nombre]) => nombre);
@@ -51,12 +52,12 @@ export function leerConfig(): Config {
 
   if (!/^https?:\/\//.test(url!)) {
     throw new Error(
-      `WEAVIATE_URL debe incluir el esquema https://. Valor recibido: "${url}".\n` +
+      `WEAVIATE_URL debe incluir el esquema https:// o http://. Valor recibido: "${url}".\n` +
         `Copia el "REST Endpoint" completo desde la consola de Weaviate Cloud.`
     );
   }
 
-  return { url: url!, apiKey: apiKey! };
+  return { url: url!, apiKey: apiKey ?? '' };
 }
 
 /**
@@ -73,6 +74,7 @@ export async function conectar(): Promise<WeaviateClient> {
   }
 
   // Soporte para Weaviate autoalojado / local en Docker (Roadmap 5.6)
+  // En modo local Weaviate opera con acceso anónimo (sin OIDC ni ApiKey)
   const parsed = new URL(url);
   return weaviate.connectToCustom({
     httpHost: parsed.hostname,
@@ -81,7 +83,6 @@ export async function conectar(): Promise<WeaviateClient> {
     grpcHost: parsed.hostname,
     grpcPort: 50051,
     grpcSecure: false,
-    authCredentials: new ApiKey(apiKey),
     timeout: { init: 30, query: 60, insert: 180 },
   });
 }
