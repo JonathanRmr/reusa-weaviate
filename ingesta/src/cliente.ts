@@ -65,7 +65,22 @@ export function leerConfig(): Config {
  */
 export async function conectar(): Promise<WeaviateClient> {
   const { url, apiKey } = leerConfig();
-  return weaviate.connectToWeaviateCloud(url, {
+  if (url.includes('weaviate.cloud') || url.includes('weaviate.network')) {
+    return weaviate.connectToWeaviateCloud(url, {
+      authCredentials: new ApiKey(apiKey),
+      timeout: { init: 30, query: 60, insert: 180 },
+    });
+  }
+
+  // Soporte para Weaviate autoalojado / local en Docker (Roadmap 5.6)
+  const parsed = new URL(url);
+  return weaviate.connectToCustom({
+    httpHost: parsed.hostname,
+    httpPort: Number(parsed.port) || (parsed.protocol === 'https:' ? 443 : 80),
+    httpSecure: parsed.protocol === 'https:',
+    grpcHost: parsed.hostname,
+    grpcPort: 50051,
+    grpcSecure: false,
     authCredentials: new ApiKey(apiKey),
     timeout: { init: 30, query: 60, insert: 180 },
   });

@@ -8,10 +8,24 @@ let client = null;
 let conectando = null;
 
 async function crearConexion() {
-  const nuevoCliente = await weaviate.connectToWeaviateCloud(env.weaviateUrl, {
+  if (env.weaviateUrl.includes('weaviate.cloud') || env.weaviateUrl.includes('weaviate.network')) {
+    const nuevoCliente = await weaviate.connectToWeaviateCloud(env.weaviateUrl, {
+      authCredentials: new ApiKey(env.weaviateApiKey),
+    });
+    return nuevoCliente;
+  }
+
+  // Soporte para Weaviate autoalojado / local en Docker (Roadmap 5.6)
+  const parsed = new URL(env.weaviateUrl);
+  return await weaviate.connectToCustom({
+    httpHost: parsed.hostname,
+    httpPort: Number(parsed.port) || (parsed.protocol === 'https:' ? 443 : 80),
+    httpSecure: parsed.protocol === 'https:',
+    grpcHost: parsed.hostname,
+    grpcPort: 50051,
+    grpcSecure: false,
     authCredentials: new ApiKey(env.weaviateApiKey),
   });
-  return nuevoCliente;
 }
 
 /**

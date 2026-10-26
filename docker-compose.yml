@@ -1,0 +1,118 @@
+# Docker Compose para el proyecto "Reusa" (Roadmap 5.0 - 5.6)
+#
+# Perfiles disponibles:
+#   1. Perfil por defecto (nube): "docker compose up"
+#      Levanta únicamente api y web, conectándose al clúster de Weaviate Cloud.
+#   2. Perfil local: "docker compose --profile local up"
+#      Levanta Weaviate autoalojado + modelo de inferencia + contenedor de ingesta + api + web.
+
+services:
+  # =========================================================================
+  # SERVICIOS DEL PERFIL POR DEFECTO ("nube") Y LOCAL
+  # =========================================================================
+
+  # Frontend React servido con Nginx y proxy inverso a /api/
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    image: reusa-web:1.0.0
+    container_name: reusa-web
+    ports:
+      # Único puerto expuesto hacia el evaluador (Roadmap 5.3)
+      - "8080:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # Backend Express (proxy hacia Weaviate y motor de búsqueda)
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    image: reusa-api:1.0.0
+    container_name: reusa-api
+    # api NO expone puertos al exterior; solo es accesible internamente por Nginx (Roadmap 5.3)
+    environment:
+      - PORT=3001
+      - WEAVIATE_URL=${WEAVIATE_URL:-http://weaviate:8080}
+      - WEAVIATE_API_KEY=${WEAVIATE_API_KEY:-reusa-solo-lectura}
+      - CORS_ORIGIN=*
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:3001/api/salud || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+      start_period: 5s
+    depends_on:
+      # En perfil local espera a que la ingesta complete la carga de datos
+      ingesta:
+        condition: service_completed_successfully
+        required: false
+    restart: unless-stopped
+
+  # =========================================================================
+  # SERVICIOS EXCLUSIVOS DEL PERFIL "local" (RESPALDO SIN INTERNET NI CUENTAS)
+  # =========================================================================
+
+  # Contenedor de ingesta: corre una sola vez para crear esquema y cargar semilla.csv
+  ingesta:
+    profiles:
+      - local
+    build:
+      context: ./ingesta
+      dockerfile: Dockerfile
+    image: reusa-ingesta:1.0.0
+    container_name: reusa-ingesta
+    environment:
+      - WEAVIATE_URL=http://weaviate:8080
+      - WEAVIATE_API_KEY=reusa-local-key
+    volumes:
+      - ./datos:/datos:ro
+    depends_on:
+      weaviate:
+        condition: service_healthy
+    restart: "no"
+
+  # Base de datos vectorial Weaviate autoalojada (versión fija, Roadmap 5.4)
+  weaviate:
+    profiles:
+      - local
+    image: cr.weaviate.io/semitechnologies/weaviate:1.27.0
+    container_name: reusa-weaviate-local
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - '8080'
+      - --scheme
+      - http
+    environment:
+      - TRANSFORMERS_INFERENCE_API=http://t2v-transformers:8080
+      - ENABLE_MODULES=text2vec-transformers
+      - DEFAULT_VECTORIZER_MODULE=text2vec-transformers
+      - AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=true
+      - PERSISTENCE_DATA_PATH=/var/lib/weaviate
+      - CLUSTER_HOSTNAME=node1
+      - QUERY_DEFAULTS_LIMIT=25
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:8080/v1/.well-known/ready || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+      start_period: 10s
+    depends_on:
+      t2v-transformers:
+        condition: service_started
+    restart: unless-stopped
+
+  # Modelo de inferencia de embeddings para el perfil local (Roadmap 5.6)
+  t2v-transformers:
+    profiles:
+      - local
+    image: semitechnologies/transformers-inference:sentence-transformers-multi-qa-MiniLM-L6-cos-v1
+    container_name: reusa-t2v-transformers
+    environment:
+      - ENABLE_CUDA=0
+    restart: unless-stopped

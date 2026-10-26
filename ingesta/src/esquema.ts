@@ -43,9 +43,13 @@ async function principal() {
       // Decision 1: el embedding representa QUE ES el articulo, no sus atributos
       // administrativos. Si `precio` o `ciudad` entraran al vector, dos articulos
       // de $500.000 en Tunja se parecerian aunque uno sea una nevera y otro una guitarra.
-      vectorizers: vectors.text2VecWeaviate({
-        sourceProperties: ['titulo', 'descripcionLimpia'],
-      }),
+      vectorizers: (process.env.WEAVIATE_URL?.includes('weaviate.cloud') || process.env.WEAVIATE_URL?.includes('weaviate.network'))
+        ? vectors.text2VecWeaviate({
+            sourceProperties: ['titulo', 'descripcionLimpia'],
+          })
+        : vectors.text2VecTransformers({
+            sourceProperties: ['titulo', 'descripcionLimpia'],
+          }),
 
       properties: [
         // Lo unico que se vectoriza y lo unico donde busca BM25: asi los dos lados

@@ -6,6 +6,35 @@ quien busca *"algo para calentar la sala"* debe encontrar el anuncio titulado
 *"VENDO CALEFACTOR CASI NUEVO BARATO"*, con el que no comparte una sola palabra.
 
 El plan completo está en [`roadmap-reusa-weaviate.md`](roadmap-reusa-weaviate.md).
+El manual de usuario de la aplicación está en [`docs/manual.md`](docs/manual.md).
+
+---
+
+## Para evaluar este proyecto
+
+### Opción 1 — un comando (recomendada)
+
+```bash
+docker compose up
+```
+
+Abrir **http://localhost:8080**
+
+### Opción 2 — sin internet ni cuentas
+
+```bash
+docker compose --profile local up
+```
+
+*(La primera vez descarga ~1 GB del modelo de embeddings; esperar al mensaje de salud de la API listo para recibir consultas).*
+
+### Consultas sugeridas para probar
+
+- `"algo para calentar la sala"` → el deslizador a la izquierda (BM25) no encuentra nada relevante (trae alfombras); a la derecha (Vectorial α=1) sí encuentra los calefactores.
+- `"mueble para guardar ropa"` → BM25 devuelve un mueble de televisión; el vector ubica el armario en madera en primer lugar a distancia 0.513.
+- `"iPhone 13 Pro Max"` → ambos algoritmos lo ubican en las primeras posiciones por coincidencia del modelo exacto.
+
+---
 
 ## Estructura
 
@@ -13,12 +42,13 @@ El plan completo está en [`roadmap-reusa-weaviate.md`](roadmap-reusa-weaviate.m
 /ingesta    limpieza, normalización y carga de datos   (Fase 1 — Edwar)
 /api        servidor Express, proxy hacia Weaviate     (Fase 2 — Johnatan)
             + motor de búsqueda                        (Fase 3 — Alejandro)
-/web        aplicación React                           (Fase 4 — David)
+/web        aplicación React + Vite en alto contraste  (Fase 4 — David)
 /datos      semilla.csv y la verdad de referencia para F5
-/docs       contrato-api.md, esquema.md, evaluacion.md, manual.md
+/docs       contrato-api.md, esquema.md, evaluacion.md, manual.md, informe-datos.md
+docker-compose.yml  perfil "nube" (por defecto) y perfil "local" (Fase 5 — David)
 ```
 
-## Puesta en marcha
+## Puesta en marcha para desarrollo manual
 
 Las credenciales van en **un solo `.env` en la raíz**, que leen tanto `/api` como `/ingesta`:
 
@@ -27,7 +57,7 @@ cp .env.example .env     # y rellenar WEAVIATE_URL y WEAVIATE_API_KEY
 ```
 
 El `.env` nunca se sube: está en `.gitignore`. Para **ingestar** hace falta la *Admin API key*;
-el perfil `nube` del futuro `docker-compose.yml` usará la clave de **solo lectura** (roadmap 5.1).
+el perfil `nube` de `docker-compose.yml` utiliza la clave de **solo lectura** gestionada por RBAC (roadmap 5.1).
 
 ### Ingesta (Fase 1)
 
@@ -75,17 +105,23 @@ Resultados y conclusiones en [`docs/evaluacion.md`](docs/evaluacion.md): `alpha`
 una republicación se marca por distancia < 0.29 + misma ciudad + precio a ±20 %, con 10 de 10
 detectadas y 0 falsas alarmas en los 36.846 pares del catálogo.
 
-## Estado
+### Frontend y UX (Fase 4)
+
+La interfaz en React + Vite vive en `/web` y está diseñada con alto contraste pensado para videobeam:
+
+```bash
+cd web && npm install
+npm run dev                 # http://localhost:5173 con proxy a localhost:3001
+npm run build               # compila a /web/dist
+```
+
+## Estado del Proyecto
 
 | Fase | Responsable | Estado |
 |---|---|---|
 | 1 — Esquema, limpieza e ingesta | Edwar | **Completa.** 272 publicaciones ingestadas y verificadas; clave de solo lectura creada |
-| 2 — Backend, contrato e infraestructura | Johnatan | Contrato firmado y Express en pie con *stubs* |
+| 2 — Backend, contrato e infraestructura | Johnatan | **Completa.** Contrato firmado, Express y proxy funcionando |
 | 3 — Motor de consultas y evaluación | Alejandro | **Completa.** `buscar` y `similares` contra el clúster; Precision@5, umbral calibrado y filtros medidos |
-| 4 — Frontend y presentación | David | Pendiente |
-| 5 — Contenerización | David | Pendiente |
-
-> La sección "Para evaluar este proyecto" (`docker compose up`) la añade David en la Fase 5.7.
-
-La clave de **solo lectura** para el perfil `nube` de ese compose ya está creada y verificada: no
-puede escribir, ni borrar, ni crear colecciones (ver [`docs/esquema.md`](docs/esquema.md) §5).
+| 4 — Frontend y presentación | David | **Completa.** UI React + Vite, alto contraste videobeam, buscador con debounce, comparativa F4 y detector F5 |
+| 5 — Contenerización | David | **Completa.** Dockerfiles para api, ingesta y web, docker-compose.yml con perfil nube y perfil local |
+| 6 — Cierre conjunto e informe | Todos | Manual de usuario en [`docs/manual.md`](docs/manual.md), guion de demo y diapositivas |
