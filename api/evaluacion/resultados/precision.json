@@ -1,0 +1,3045 @@
+{
+  "generado": "2026-10-26T00:57:55.183Z",
+  "k": 5,
+  "alphas": [
+    0,
+    0.25,
+    0.5,
+    0.65,
+    0.75,
+    1
+  ],
+  "consultas": [
+    {
+      "q": "algo para calentar la sala",
+      "grupo": "semantica",
+      "criterio": "Aparato cuya función es calentar un espacio de la casa.",
+      "relevantes": [
+        "REU-E001",
+        "REU-E061",
+        "REU-A036"
+      ],
+      "descartesDiscutibles": "Pistola de calor (herramienta para despegar vinilos), calentadores de agua, cobija térmica (calienta a la persona, no la sala), alfombra."
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "grupo": "semantica",
+      "criterio": "Mueble cuya función declarada incluye guardar o colgar ropa.",
+      "relevantes": [
+        "REU-E009",
+        "REU-E064",
+        "REU-D010",
+        "REU-A045",
+        "REU-D009"
+      ],
+      "descartesDiscutibles": "Zapatero y organizador de zapatos (calzado, no ropa), ganchos sueltos (no son un mueble), tendedero (es para secar), puff que guarda cobijas, cama nido con almacenamiento genérico."
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "grupo": "semantica",
+      "criterio": "Equipo o mobiliario de oficina remota: computador, escritorio, silla de trabajo, periféricos de entrada o salida, conectividad, respaldo eléctrico o impresión.",
+      "relevantes": [
+        "REU-E014",
+        "REU-D063",
+        "REU-E010",
+        "REU-A044",
+        "REU-D008",
+        "REU-J044",
+        "REU-E015",
+        "REU-E065",
+        "REU-J014",
+        "REU-D012",
+        "REU-A011",
+        "REU-J015",
+        "REU-E017",
+        "REU-J048",
+        "REU-A047",
+        "REU-A012",
+        "REU-A049",
+        "REU-E019",
+        "REU-J017",
+        "REU-A027",
+        "REU-D013",
+        "REU-J018",
+        "REU-A014",
+        "REU-E018",
+        "REU-J047"
+      ],
+      "descartesDiscutibles": "Almacenamiento (disco externo, memoria USB), lámpara de lectura, proyector, barra de sonido, interfaz de audio y controlador MIDI (son para música)."
+    },
+    {
+      "q": "algo para hacer ejercicio en la casa",
+      "grupo": "semantica",
+      "criterio": "Equipo de entrenamiento físico que se usa dentro de la vivienda.",
+      "relevantes": [
+        "REU-E022",
+        "REU-A018",
+        "REU-J021",
+        "REU-E023",
+        "REU-D020",
+        "REU-A020",
+        "REU-J068"
+      ],
+      "descartesDiscutibles": "Guantes de boxeo (necesitan costal o compañero), mesa de ping pong (es un juego), bicicletas, patines y kayak (son para exteriores)."
+    },
+    {
+      "q": "donde pongo a dormir al bebe",
+      "grupo": "semantica",
+      "criterio": "Mueble o equipo en el que el bebé duerme.",
+      "relevantes": [
+        "REU-J012",
+        "REU-A017",
+        "REU-E025"
+      ],
+      "descartesDiscutibles": "Coches (son para pasear aunque reclinen), carpa de juegos, cama nido (es para niños mayores)."
+    },
+    {
+      "q": "algo para refrescar la habitacion cuando hace calor",
+      "grupo": "semantica",
+      "criterio": "Aparato que enfría o ventila un espacio.",
+      "relevantes": [
+        "REU-E007",
+        "REU-A005",
+        "REU-E056",
+        "REU-A004"
+      ],
+      "descartesDiscutibles": "Deshumidificador y humidificador (no bajan la temperatura), neveras (enfrían comida, no el cuarto)."
+    },
+    {
+      "q": "quiero aprender a tocar un instrumento",
+      "grupo": "semantica",
+      "criterio": "Instrumento musical que se toca por sí solo, sin accesorios aparte.",
+      "relevantes": [
+        "REU-E030",
+        "REU-E069",
+        "REU-E031",
+        "REU-J027",
+        "REU-J028",
+        "REU-J056",
+        "REU-A025",
+        "REU-A026",
+        "REU-A059",
+        "REU-D024",
+        "REU-D025",
+        "REU-D026",
+        "REU-D053"
+      ],
+      "descartesDiscutibles": "Amplificadores, interfaz de audio y micrófono (son accesorios), controlador MIDI (necesita computador y software para sonar)."
+    },
+    {
+      "q": "algo para mantener fria la comida",
+      "grupo": "semantica",
+      "criterio": "Aparato de refrigeración de alimentos.",
+      "relevantes": [
+        "REU-E002",
+        "REU-E062",
+        "REU-J005",
+        "REU-D068",
+        "REU-D036"
+      ],
+      "descartesDiscutibles": "Aire acondicionado (enfría el cuarto), dispensador de agua fría (no guarda comida)."
+    },
+    {
+      "q": "iPhone 13 Pro Max 256GB",
+      "grupo": "exacta",
+      "criterio": "Exactamente ese modelo de celular.",
+      "relevantes": [
+        "REU-E016",
+        "REU-E066"
+      ],
+      "descartesDiscutibles": "Otros celulares, portátiles con disco de 256GB."
+    },
+    {
+      "q": "botas talla 39",
+      "grupo": "exacta",
+      "criterio": "Botas en talla 39; en un clasificado otra talla no le sirve al comprador.",
+      "relevantes": [
+        "REU-J057"
+      ],
+      "descartesDiscutibles": "Botas de seguridad talla 42, tenis talla 40, patines talla 38."
+    }
+  ],
+  "resumen": [
+    {
+      "alpha": 0,
+      "precision": 0.18,
+      "precisionNormalizada": 0.3333333333333333,
+      "precisionSemantica": 0.15,
+      "precisionExacta": 0.30000000000000004,
+      "mrr": 0.45,
+      "mrrSemantica": 0.31250000000000006,
+      "mrrExacta": 1,
+      "tomoMsMediana": 92
+    },
+    {
+      "alpha": 0.25,
+      "precision": 0.24000000000000005,
+      "precisionNormalizada": 0.39333333333333337,
+      "precisionSemantica": 0.22500000000000003,
+      "precisionExacta": 0.30000000000000004,
+      "mrr": 0.5458333333333333,
+      "mrrSemantica": 0.43229166666666663,
+      "mrrExacta": 1,
+      "tomoMsMediana": 122
+    },
+    {
+      "alpha": 0.5,
+      "precision": 0.3,
+      "precisionNormalizada": 0.4533333333333333,
+      "precisionSemantica": 0.3,
+      "precisionExacta": 0.30000000000000004,
+      "mrr": 0.6434523809523809,
+      "mrrSemantica": 0.5543154761904762,
+      "mrrExacta": 1,
+      "tomoMsMediana": 124
+    },
+    {
+      "alpha": 0.65,
+      "precision": 0.32,
+      "precisionNormalizada": 0.47333333333333344,
+      "precisionSemantica": 0.325,
+      "precisionExacta": 0.30000000000000004,
+      "mrr": 0.7119047619047618,
+      "mrrSemantica": 0.6398809523809523,
+      "mrrExacta": 1,
+      "tomoMsMediana": 122
+    },
+    {
+      "alpha": 0.75,
+      "precision": 0.36,
+      "precisionNormalizada": 0.5266666666666667,
+      "precisionSemantica": 0.375,
+      "precisionExacta": 0.30000000000000004,
+      "mrr": 0.7208333333333334,
+      "mrrSemantica": 0.6510416666666667,
+      "mrrExacta": 1,
+      "tomoMsMediana": 122
+    },
+    {
+      "alpha": 1,
+      "precision": 0.4200000000000001,
+      "precisionNormalizada": 0.6,
+      "precisionSemantica": 0.45000000000000007,
+      "precisionExacta": 0.30000000000000004,
+      "mrr": 0.7333333333333333,
+      "mrrSemantica": 0.6666666666666666,
+      "mrrExacta": 1,
+      "tomoMsMediana": 124
+    }
+  ],
+  "filas": [
+    {
+      "q": "algo para calentar la sala",
+      "grupo": "semantica",
+      "alpha": 0,
+      "modo": "bm25",
+      "tomoMs": 94,
+      "precision": 0,
+      "techo": 0.6,
+      "rr": 0,
+      "top": [
+        {
+          "codigo": "REU-E044",
+          "titulo": "Alfombra grande para sala",
+          "relevante": false,
+          "score": 4.779,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E005",
+          "titulo": "Microondas 20 litros poco uso",
+          "relevante": false,
+          "score": 3.062,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E007",
+          "titulo": "ventilador de pie 3 velocidades",
+          "relevante": false,
+          "score": 2.812,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D041",
+          "titulo": "mesa auxiliar de centro",
+          "relevante": false,
+          "score": 2.397,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D032",
+          "titulo": "Libros de cocina ilustrados",
+          "relevante": false,
+          "score": 2.352,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para calentar la sala",
+      "grupo": "semantica",
+      "alpha": 0.25,
+      "modo": "hybrid",
+      "tomoMs": 128,
+      "precision": 0,
+      "techo": 0.6,
+      "rr": 0,
+      "top": [
+        {
+          "codigo": "REU-E044",
+          "titulo": "Alfombra grande para sala",
+          "relevante": false,
+          "score": 0.886,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E005",
+          "titulo": "Microondas 20 litros poco uso",
+          "relevante": false,
+          "score": 0.536,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E007",
+          "titulo": "ventilador de pie 3 velocidades",
+          "relevante": false,
+          "score": 0.479,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E063",
+          "titulo": "Mueble de sala tres puestos",
+          "relevante": false,
+          "score": 0.463,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D041",
+          "titulo": "mesa auxiliar de centro",
+          "relevante": false,
+          "score": 0.381,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para calentar la sala",
+      "grupo": "semantica",
+      "alpha": 0.5,
+      "modo": "hybrid",
+      "tomoMs": 122,
+      "precision": 0,
+      "techo": 0.6,
+      "rr": 0.125,
+      "top": [
+        {
+          "codigo": "REU-E044",
+          "titulo": "Alfombra grande para sala",
+          "relevante": false,
+          "score": 0.773,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A024",
+          "titulo": "pistola de calor con boquillas",
+          "relevante": false,
+          "score": 0.515,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E005",
+          "titulo": "Microondas 20 litros poco uso",
+          "relevante": false,
+          "score": 0.486,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E007",
+          "titulo": "ventilador de pie 3 velocidades",
+          "relevante": false,
+          "score": 0.431,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E063",
+          "titulo": "Mueble de sala tres puestos",
+          "relevante": false,
+          "score": 0.42,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para calentar la sala",
+      "grupo": "semantica",
+      "alpha": 0.65,
+      "modo": "hybrid",
+      "tomoMs": 121,
+      "precision": 0,
+      "techo": 0.6,
+      "rr": 0.14285714285714285,
+      "top": [
+        {
+          "codigo": "REU-E044",
+          "titulo": "Alfombra grande para sala",
+          "relevante": false,
+          "score": 0.704,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A024",
+          "titulo": "pistola de calor con boquillas",
+          "relevante": false,
+          "score": 0.66,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J065",
+          "titulo": "plancha para cabello ceramica",
+          "relevante": false,
+          "score": 0.495,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E005",
+          "titulo": "Microondas 20 litros poco uso",
+          "relevante": false,
+          "score": 0.456,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E007",
+          "titulo": "ventilador de pie 3 velocidades",
+          "relevante": false,
+          "score": 0.402,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para calentar la sala",
+      "grupo": "semantica",
+      "alpha": 0.75,
+      "modo": "hybrid",
+      "tomoMs": 122,
+      "precision": 0.2,
+      "techo": 0.6,
+      "rr": 0.25,
+      "top": [
+        {
+          "codigo": "REU-A024",
+          "titulo": "pistola de calor con boquillas",
+          "relevante": false,
+          "score": 0.757,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E044",
+          "titulo": "Alfombra grande para sala",
+          "relevante": false,
+          "score": 0.659,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J065",
+          "titulo": "plancha para cabello ceramica",
+          "relevante": false,
+          "score": 0.549,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E001",
+          "titulo": "Vendo calefactor casi nuevo barato",
+          "relevante": true,
+          "score": 0.441,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E005",
+          "titulo": "Microondas 20 litros poco uso",
+          "relevante": false,
+          "score": 0.436,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para calentar la sala",
+      "grupo": "semantica",
+      "alpha": 1,
+      "modo": "vector",
+      "tomoMs": 125,
+      "precision": 0.4,
+      "techo": 0.6,
+      "rr": 0.3333333333333333,
+      "top": [
+        {
+          "codigo": "REU-A024",
+          "titulo": "pistola de calor con boquillas",
+          "relevante": false,
+          "score": null,
+          "distance": 0.592
+        },
+        {
+          "codigo": "REU-J065",
+          "titulo": "plancha para cabello ceramica",
+          "relevante": false,
+          "score": null,
+          "distance": 0.672
+        },
+        {
+          "codigo": "REU-E001",
+          "titulo": "Vendo calefactor casi nuevo barato",
+          "relevante": true,
+          "score": null,
+          "distance": 0.696
+        },
+        {
+          "codigo": "REU-E061",
+          "titulo": "Calefactor ceramico para habitacion",
+          "relevante": true,
+          "score": null,
+          "distance": 0.703
+        },
+        {
+          "codigo": "REU-E044",
+          "titulo": "Alfombra grande para sala",
+          "relevante": false,
+          "score": null,
+          "distance": 0.707
+        }
+      ]
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "grupo": "semantica",
+      "alpha": 0,
+      "modo": "bm25",
+      "tomoMs": 93,
+      "precision": 0.2,
+      "techo": 1,
+      "rr": 0.5,
+      "top": [
+        {
+          "codigo": "REU-A006",
+          "titulo": "mueble para television flotante",
+          "relevante": false,
+          "score": 5.115,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E064",
+          "titulo": "armario en madera con entrepaños",
+          "relevante": true,
+          "score": 4.375,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J041",
+          "titulo": "tendedero de ropa plegable",
+          "relevante": false,
+          "score": 4.291,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A002",
+          "titulo": "Secadora de ropa 22 libras",
+          "relevante": false,
+          "score": 3.453,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E050",
+          "titulo": "plancha de ropa a vapor",
+          "relevante": false,
+          "score": 3.33,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "grupo": "semantica",
+      "alpha": 0.25,
+      "modo": "hybrid",
+      "tomoMs": 122,
+      "precision": 0.2,
+      "techo": 1,
+      "rr": 0.5,
+      "top": [
+        {
+          "codigo": "REU-A006",
+          "titulo": "mueble para television flotante",
+          "relevante": false,
+          "score": 0.885,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E064",
+          "titulo": "armario en madera con entrepaños",
+          "relevante": true,
+          "score": 0.88,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J041",
+          "titulo": "tendedero de ropa plegable",
+          "relevante": false,
+          "score": 0.777,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A002",
+          "titulo": "Secadora de ropa 22 libras",
+          "relevante": false,
+          "score": 0.577,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A039",
+          "titulo": "Organizador de zapatos bajo cama",
+          "relevante": false,
+          "score": 0.537,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "grupo": "semantica",
+      "alpha": 0.5,
+      "modo": "hybrid",
+      "tomoMs": 124,
+      "precision": 0.2,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E064",
+          "titulo": "armario en madera con entrepaños",
+          "relevante": true,
+          "score": 0.92,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A006",
+          "titulo": "mueble para television flotante",
+          "relevante": false,
+          "score": 0.771,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J041",
+          "titulo": "tendedero de ropa plegable",
+          "relevante": false,
+          "score": 0.732,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A039",
+          "titulo": "Organizador de zapatos bajo cama",
+          "relevante": false,
+          "score": 0.59,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A002",
+          "titulo": "Secadora de ropa 22 libras",
+          "relevante": false,
+          "score": 0.513,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "grupo": "semantica",
+      "alpha": 0.65,
+      "modo": "hybrid",
+      "tomoMs": 119,
+      "precision": 0.2,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E064",
+          "titulo": "armario en madera con entrepaños",
+          "relevante": true,
+          "score": 0.944,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J041",
+          "titulo": "tendedero de ropa plegable",
+          "relevante": false,
+          "score": 0.705,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A006",
+          "titulo": "mueble para television flotante",
+          "relevante": false,
+          "score": 0.702,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A039",
+          "titulo": "Organizador de zapatos bajo cama",
+          "relevante": false,
+          "score": 0.621,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A002",
+          "titulo": "Secadora de ropa 22 libras",
+          "relevante": false,
+          "score": 0.475,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "grupo": "semantica",
+      "alpha": 0.75,
+      "modo": "hybrid",
+      "tomoMs": 123,
+      "precision": 0.2,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E064",
+          "titulo": "armario en madera con entrepaños",
+          "relevante": true,
+          "score": 0.96,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J041",
+          "titulo": "tendedero de ropa plegable",
+          "relevante": false,
+          "score": 0.687,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A006",
+          "titulo": "mueble para television flotante",
+          "relevante": false,
+          "score": 0.656,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A039",
+          "titulo": "Organizador de zapatos bajo cama",
+          "relevante": false,
+          "score": 0.643,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E063",
+          "titulo": "Mueble de sala tres puestos",
+          "relevante": false,
+          "score": 0.486,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "grupo": "semantica",
+      "alpha": 1,
+      "modo": "vector",
+      "tomoMs": 132,
+      "precision": 0.2,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E064",
+          "titulo": "armario en madera con entrepaños",
+          "relevante": true,
+          "score": null,
+          "distance": 0.513
+        },
+        {
+          "codigo": "REU-A039",
+          "titulo": "Organizador de zapatos bajo cama",
+          "relevante": false,
+          "score": null,
+          "distance": 0.609
+        },
+        {
+          "codigo": "REU-J041",
+          "titulo": "tendedero de ropa plegable",
+          "relevante": false,
+          "score": null,
+          "distance": 0.625
+        },
+        {
+          "codigo": "REU-D011",
+          "titulo": "Puff otomana con almacenamiento",
+          "relevante": false,
+          "score": null,
+          "distance": 0.652
+        },
+        {
+          "codigo": "REU-E063",
+          "titulo": "Mueble de sala tres puestos",
+          "relevante": false,
+          "score": null,
+          "distance": 0.655
+        }
+      ]
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "grupo": "semantica",
+      "alpha": 0,
+      "modo": "bm25",
+      "tomoMs": 92,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E065",
+          "titulo": "Portatil lenovo para estudiar o trabajar",
+          "relevante": true,
+          "score": 8.186,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E014",
+          "titulo": "silla ergonomica de oficina",
+          "relevante": true,
+          "score": 5.409,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A064",
+          "titulo": "Casa para perro en madera",
+          "relevante": false,
+          "score": 3.959,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E017",
+          "titulo": "Monitor 24 pulgadas full hd",
+          "relevante": true,
+          "score": 2.744,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J003",
+          "titulo": "olla arrocera grande",
+          "relevante": false,
+          "score": 2.466,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "grupo": "semantica",
+      "alpha": 0.25,
+      "modo": "hybrid",
+      "tomoMs": 127,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E065",
+          "titulo": "Portatil lenovo para estudiar o trabajar",
+          "relevante": true,
+          "score": 0.882,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E014",
+          "titulo": "silla ergonomica de oficina",
+          "relevante": true,
+          "score": 0.721,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A064",
+          "titulo": "Casa para perro en madera",
+          "relevante": false,
+          "score": 0.55,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E023",
+          "titulo": "set de mancuernas 20 kilos",
+          "relevante": false,
+          "score": 0.303,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E017",
+          "titulo": "Monitor 24 pulgadas full hd",
+          "relevante": true,
+          "score": 0.3,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "grupo": "semantica",
+      "alpha": 0.5,
+      "modo": "hybrid",
+      "tomoMs": 121,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E014",
+          "titulo": "silla ergonomica de oficina",
+          "relevante": true,
+          "score": 0.814,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E065",
+          "titulo": "Portatil lenovo para estudiar o trabajar",
+          "relevante": true,
+          "score": 0.764,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A064",
+          "titulo": "Casa para perro en madera",
+          "relevante": false,
+          "score": 0.666,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E023",
+          "titulo": "set de mancuernas 20 kilos",
+          "relevante": false,
+          "score": 0.442,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E010",
+          "titulo": "Escritorio con cajonera",
+          "relevante": true,
+          "score": 0.374,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "grupo": "semantica",
+      "alpha": 0.65,
+      "modo": "hybrid",
+      "tomoMs": 123,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E014",
+          "titulo": "silla ergonomica de oficina",
+          "relevante": true,
+          "score": 0.87,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A064",
+          "titulo": "Casa para perro en madera",
+          "relevante": false,
+          "score": 0.736,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E065",
+          "titulo": "Portatil lenovo para estudiar o trabajar",
+          "relevante": true,
+          "score": 0.693,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E023",
+          "titulo": "set de mancuernas 20 kilos",
+          "relevante": false,
+          "score": 0.525,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E010",
+          "titulo": "Escritorio con cajonera",
+          "relevante": true,
+          "score": 0.444,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "grupo": "semantica",
+      "alpha": 0.75,
+      "modo": "hybrid",
+      "tomoMs": 121,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E014",
+          "titulo": "silla ergonomica de oficina",
+          "relevante": true,
+          "score": 0.907,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A064",
+          "titulo": "Casa para perro en madera",
+          "relevante": false,
+          "score": 0.782,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E065",
+          "titulo": "Portatil lenovo para estudiar o trabajar",
+          "relevante": true,
+          "score": 0.646,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E023",
+          "titulo": "set de mancuernas 20 kilos",
+          "relevante": false,
+          "score": 0.58,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E010",
+          "titulo": "Escritorio con cajonera",
+          "relevante": true,
+          "score": 0.492,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "grupo": "semantica",
+      "alpha": 1,
+      "modo": "vector",
+      "tomoMs": 120,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E014",
+          "titulo": "silla ergonomica de oficina",
+          "relevante": true,
+          "score": null,
+          "distance": 0.768
+        },
+        {
+          "codigo": "REU-A064",
+          "titulo": "Casa para perro en madera",
+          "relevante": false,
+          "score": null,
+          "distance": 0.783
+        },
+        {
+          "codigo": "REU-E023",
+          "titulo": "set de mancuernas 20 kilos",
+          "relevante": false,
+          "score": null,
+          "distance": 0.81
+        },
+        {
+          "codigo": "REU-A012",
+          "titulo": "mouse inalambrico ergonomico",
+          "relevante": true,
+          "score": null,
+          "distance": 0.821
+        },
+        {
+          "codigo": "REU-E010",
+          "titulo": "Escritorio con cajonera",
+          "relevante": true,
+          "score": null,
+          "distance": 0.826
+        }
+      ]
+    },
+    {
+      "q": "algo para hacer ejercicio en la casa",
+      "grupo": "semantica",
+      "alpha": 0,
+      "modo": "bm25",
+      "tomoMs": 92,
+      "precision": 0,
+      "techo": 1,
+      "rr": 0.16666666666666666,
+      "top": [
+        {
+          "codigo": "REU-A064",
+          "titulo": "Casa para perro en madera",
+          "relevante": false,
+          "score": 5.198,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J003",
+          "titulo": "olla arrocera grande",
+          "relevante": false,
+          "score": 3,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D002",
+          "titulo": "Batidora de pedestal con bowl",
+          "relevante": false,
+          "score": 2.917,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E014",
+          "titulo": "silla ergonomica de oficina",
+          "relevante": false,
+          "score": 2.847,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D003",
+          "titulo": "molino de maiz manual",
+          "relevante": false,
+          "score": 2.831,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para hacer ejercicio en la casa",
+      "grupo": "semantica",
+      "alpha": 0.25,
+      "modo": "hybrid",
+      "tomoMs": 124,
+      "precision": 0.4,
+      "techo": 1,
+      "rr": 0.3333333333333333,
+      "top": [
+        {
+          "codigo": "REU-A064",
+          "titulo": "Casa para perro en madera",
+          "relevante": false,
+          "score": 0.865,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A048",
+          "titulo": "Proyector hd para cine en casa",
+          "relevante": false,
+          "score": 0.583,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E023",
+          "titulo": "set de mancuernas 20 kilos",
+          "relevante": true,
+          "score": 0.555,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D002",
+          "titulo": "Batidora de pedestal con bowl",
+          "relevante": false,
+          "score": 0.487,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D020",
+          "titulo": "Pesas rusas kettlebell 16 kg",
+          "relevante": true,
+          "score": 0.461,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para hacer ejercicio en la casa",
+      "grupo": "semantica",
+      "alpha": 0.5,
+      "modo": "hybrid",
+      "tomoMs": 126,
+      "precision": 0.4,
+      "techo": 1,
+      "rr": 0.5,
+      "top": [
+        {
+          "codigo": "REU-A064",
+          "titulo": "Casa para perro en madera",
+          "relevante": false,
+          "score": 0.731,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E023",
+          "titulo": "set de mancuernas 20 kilos",
+          "relevante": true,
+          "score": 0.703,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D002",
+          "titulo": "Batidora de pedestal con bowl",
+          "relevante": false,
+          "score": 0.52,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A048",
+          "titulo": "Proyector hd para cine en casa",
+          "relevante": false,
+          "score": 0.519,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D020",
+          "titulo": "Pesas rusas kettlebell 16 kg",
+          "relevante": true,
+          "score": 0.493,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para hacer ejercicio en la casa",
+      "grupo": "semantica",
+      "alpha": 0.65,
+      "modo": "hybrid",
+      "tomoMs": 128,
+      "precision": 0.4,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E023",
+          "titulo": "set de mancuernas 20 kilos",
+          "relevante": true,
+          "score": 0.792,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A064",
+          "titulo": "Casa para perro en madera",
+          "relevante": false,
+          "score": 0.65,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D002",
+          "titulo": "Batidora de pedestal con bowl",
+          "relevante": false,
+          "score": 0.539,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A016",
+          "titulo": "Gimnasio didactico para bebe",
+          "relevante": false,
+          "score": 0.533,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D020",
+          "titulo": "Pesas rusas kettlebell 16 kg",
+          "relevante": true,
+          "score": 0.512,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para hacer ejercicio en la casa",
+      "grupo": "semantica",
+      "alpha": 0.75,
+      "modo": "hybrid",
+      "tomoMs": 121,
+      "precision": 0.4,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E023",
+          "titulo": "set de mancuernas 20 kilos",
+          "relevante": true,
+          "score": 0.852,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A016",
+          "titulo": "Gimnasio didactico para bebe",
+          "relevante": false,
+          "score": 0.615,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A064",
+          "titulo": "Casa para perro en madera",
+          "relevante": false,
+          "score": 0.596,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D002",
+          "titulo": "Batidora de pedestal con bowl",
+          "relevante": false,
+          "score": 0.552,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D020",
+          "titulo": "Pesas rusas kettlebell 16 kg",
+          "relevante": true,
+          "score": 0.525,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para hacer ejercicio en la casa",
+      "grupo": "semantica",
+      "alpha": 1,
+      "modo": "vector",
+      "tomoMs": 124,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E023",
+          "titulo": "set de mancuernas 20 kilos",
+          "relevante": true,
+          "score": null,
+          "distance": 0.612
+        },
+        {
+          "codigo": "REU-A016",
+          "titulo": "Gimnasio didactico para bebe",
+          "relevante": false,
+          "score": null,
+          "distance": 0.65
+        },
+        {
+          "codigo": "REU-D002",
+          "titulo": "Batidora de pedestal con bowl",
+          "relevante": false,
+          "score": null,
+          "distance": 0.7
+        },
+        {
+          "codigo": "REU-A020",
+          "titulo": "Banco de pesas con barra",
+          "relevante": true,
+          "score": null,
+          "distance": 0.703
+        },
+        {
+          "codigo": "REU-D020",
+          "titulo": "Pesas rusas kettlebell 16 kg",
+          "relevante": true,
+          "score": null,
+          "distance": 0.706
+        }
+      ]
+    },
+    {
+      "q": "donde pongo a dormir al bebe",
+      "grupo": "semantica",
+      "alpha": 0,
+      "modo": "bm25",
+      "tomoMs": 92,
+      "precision": 0.2,
+      "techo": 0.6,
+      "rr": 0.5,
+      "top": [
+        {
+          "codigo": "REU-A016",
+          "titulo": "Gimnasio didactico para bebe",
+          "relevante": false,
+          "score": 4.517,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E025",
+          "titulo": "Corral de bebe plegable",
+          "relevante": true,
+          "score": 3.174,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J050",
+          "titulo": "caminador para bebe musical",
+          "relevante": false,
+          "score": 3.156,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A051",
+          "titulo": "Monitor de bebe con camara",
+          "relevante": false,
+          "score": 3.068,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E024",
+          "titulo": "Coche para bebe tres posiciones",
+          "relevante": false,
+          "score": 2.942,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "donde pongo a dormir al bebe",
+      "grupo": "semantica",
+      "alpha": 0.25,
+      "modo": "hybrid",
+      "tomoMs": 121,
+      "precision": 0.2,
+      "techo": 0.6,
+      "rr": 0.3333333333333333,
+      "top": [
+        {
+          "codigo": "REU-A016",
+          "titulo": "Gimnasio didactico para bebe",
+          "relevante": false,
+          "score": 0.971,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E024",
+          "titulo": "Coche para bebe tres posiciones",
+          "relevante": false,
+          "score": 0.661,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E025",
+          "titulo": "Corral de bebe plegable",
+          "relevante": true,
+          "score": 0.657,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A051",
+          "titulo": "Monitor de bebe con camara",
+          "relevante": false,
+          "score": 0.614,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J050",
+          "titulo": "caminador para bebe musical",
+          "relevante": false,
+          "score": 0.612,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "donde pongo a dormir al bebe",
+      "grupo": "semantica",
+      "alpha": 0.5,
+      "modo": "hybrid",
+      "tomoMs": 127,
+      "precision": 0.2,
+      "techo": 0.6,
+      "rr": 0.3333333333333333,
+      "top": [
+        {
+          "codigo": "REU-A016",
+          "titulo": "Gimnasio didactico para bebe",
+          "relevante": false,
+          "score": 0.942,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E024",
+          "titulo": "Coche para bebe tres posiciones",
+          "relevante": false,
+          "score": 0.774,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E025",
+          "titulo": "Corral de bebe plegable",
+          "relevante": true,
+          "score": 0.699,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A051",
+          "titulo": "Monitor de bebe con camara",
+          "relevante": false,
+          "score": 0.644,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E026",
+          "titulo": "silla para carro de bebe",
+          "relevante": false,
+          "score": 0.628,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "donde pongo a dormir al bebe",
+      "grupo": "semantica",
+      "alpha": 0.65,
+      "modo": "hybrid",
+      "tomoMs": 122,
+      "precision": 0.2,
+      "techo": 0.6,
+      "rr": 0.3333333333333333,
+      "top": [
+        {
+          "codigo": "REU-A016",
+          "titulo": "Gimnasio didactico para bebe",
+          "relevante": false,
+          "score": 0.924,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E024",
+          "titulo": "Coche para bebe tres posiciones",
+          "relevante": false,
+          "score": 0.842,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E025",
+          "titulo": "Corral de bebe plegable",
+          "relevante": true,
+          "score": 0.724,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A051",
+          "titulo": "Monitor de bebe con camara",
+          "relevante": false,
+          "score": 0.662,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E026",
+          "titulo": "silla para carro de bebe",
+          "relevante": false,
+          "score": 0.658,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "donde pongo a dormir al bebe",
+      "grupo": "semantica",
+      "alpha": 0.75,
+      "modo": "hybrid",
+      "tomoMs": 129,
+      "precision": 0.2,
+      "techo": 0.6,
+      "rr": 0.3333333333333333,
+      "top": [
+        {
+          "codigo": "REU-A016",
+          "titulo": "Gimnasio didactico para bebe",
+          "relevante": false,
+          "score": 0.913,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E024",
+          "titulo": "Coche para bebe tres posiciones",
+          "relevante": false,
+          "score": 0.887,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E025",
+          "titulo": "Corral de bebe plegable",
+          "relevante": true,
+          "score": 0.74,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E026",
+          "titulo": "silla para carro de bebe",
+          "relevante": false,
+          "score": 0.678,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A051",
+          "titulo": "Monitor de bebe con camara",
+          "relevante": false,
+          "score": 0.674,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "donde pongo a dormir al bebe",
+      "grupo": "semantica",
+      "alpha": 1,
+      "modo": "vector",
+      "tomoMs": 124,
+      "precision": 0.2,
+      "techo": 0.6,
+      "rr": 0.3333333333333333,
+      "top": [
+        {
+          "codigo": "REU-E024",
+          "titulo": "Coche para bebe tres posiciones",
+          "relevante": false,
+          "score": null,
+          "distance": 0.699
+        },
+        {
+          "codigo": "REU-A016",
+          "titulo": "Gimnasio didactico para bebe",
+          "relevante": false,
+          "score": null,
+          "distance": 0.731
+        },
+        {
+          "codigo": "REU-E025",
+          "titulo": "Corral de bebe plegable",
+          "relevante": true,
+          "score": null,
+          "distance": 0.759
+        },
+        {
+          "codigo": "REU-E026",
+          "titulo": "silla para carro de bebe",
+          "relevante": false,
+          "score": null,
+          "distance": 0.774
+        },
+        {
+          "codigo": "REU-D049",
+          "titulo": "Canguro ergonomico para cargar bebe",
+          "relevante": false,
+          "score": null,
+          "distance": 0.776
+        }
+      ]
+    },
+    {
+      "q": "algo para refrescar la habitacion cuando hace calor",
+      "grupo": "semantica",
+      "alpha": 0,
+      "modo": "bm25",
+      "tomoMs": 92,
+      "precision": 0,
+      "techo": 0.8,
+      "rr": 0,
+      "top": [
+        {
+          "codigo": "REU-J039",
+          "titulo": "Humidificador para habitacion",
+          "relevante": false,
+          "score": 5.125,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A024",
+          "titulo": "pistola de calor con boquillas",
+          "relevante": false,
+          "score": 4.899,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E002",
+          "titulo": "Nevera pequeña para apartaestudio",
+          "relevante": false,
+          "score": 4.822,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D065",
+          "titulo": "deshumidificador para habitacion",
+          "relevante": false,
+          "score": 4.641,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E061",
+          "titulo": "Calefactor ceramico para habitacion",
+          "relevante": false,
+          "score": 4.249,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para refrescar la habitacion cuando hace calor",
+      "grupo": "semantica",
+      "alpha": 0.25,
+      "modo": "hybrid",
+      "tomoMs": 121,
+      "precision": 0,
+      "techo": 0.8,
+      "rr": 0.125,
+      "top": [
+        {
+          "codigo": "REU-J039",
+          "titulo": "Humidificador para habitacion",
+          "relevante": false,
+          "score": 0.971,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A024",
+          "titulo": "pistola de calor con boquillas",
+          "relevante": false,
+          "score": 0.962,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E002",
+          "titulo": "Nevera pequeña para apartaestudio",
+          "relevante": false,
+          "score": 0.848,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D065",
+          "titulo": "deshumidificador para habitacion",
+          "relevante": false,
+          "score": 0.816,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E061",
+          "titulo": "Calefactor ceramico para habitacion",
+          "relevante": false,
+          "score": 0.792,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para refrescar la habitacion cuando hace calor",
+      "grupo": "semantica",
+      "alpha": 0.5,
+      "modo": "hybrid",
+      "tomoMs": 122,
+      "precision": 0,
+      "techo": 0.8,
+      "rr": 0.14285714285714285,
+      "top": [
+        {
+          "codigo": "REU-A024",
+          "titulo": "pistola de calor con boquillas",
+          "relevante": false,
+          "score": 0.975,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J039",
+          "titulo": "Humidificador para habitacion",
+          "relevante": false,
+          "score": 0.941,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E061",
+          "titulo": "Calefactor ceramico para habitacion",
+          "relevante": false,
+          "score": 0.782,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E002",
+          "titulo": "Nevera pequeña para apartaestudio",
+          "relevante": false,
+          "score": 0.764,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D065",
+          "titulo": "deshumidificador para habitacion",
+          "relevante": false,
+          "score": 0.742,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para refrescar la habitacion cuando hace calor",
+      "grupo": "semantica",
+      "alpha": 0.65,
+      "modo": "hybrid",
+      "tomoMs": 122,
+      "precision": 0,
+      "techo": 0.8,
+      "rr": 0.14285714285714285,
+      "top": [
+        {
+          "codigo": "REU-A024",
+          "titulo": "pistola de calor con boquillas",
+          "relevante": false,
+          "score": 0.982,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J039",
+          "titulo": "Humidificador para habitacion",
+          "relevante": false,
+          "score": 0.924,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E061",
+          "titulo": "Calefactor ceramico para habitacion",
+          "relevante": false,
+          "score": 0.775,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E002",
+          "titulo": "Nevera pequeña para apartaestudio",
+          "relevante": false,
+          "score": 0.714,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D065",
+          "titulo": "deshumidificador para habitacion",
+          "relevante": false,
+          "score": 0.697,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para refrescar la habitacion cuando hace calor",
+      "grupo": "semantica",
+      "alpha": 0.75,
+      "modo": "hybrid",
+      "tomoMs": 121,
+      "precision": 0,
+      "techo": 0.8,
+      "rr": 0.125,
+      "top": [
+        {
+          "codigo": "REU-A024",
+          "titulo": "pistola de calor con boquillas",
+          "relevante": false,
+          "score": 0.987,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J039",
+          "titulo": "Humidificador para habitacion",
+          "relevante": false,
+          "score": 0.912,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E061",
+          "titulo": "Calefactor ceramico para habitacion",
+          "relevante": false,
+          "score": 0.771,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E002",
+          "titulo": "Nevera pequeña para apartaestudio",
+          "relevante": false,
+          "score": 0.68,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D065",
+          "titulo": "deshumidificador para habitacion",
+          "relevante": false,
+          "score": 0.668,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para refrescar la habitacion cuando hace calor",
+      "grupo": "semantica",
+      "alpha": 1,
+      "modo": "vector",
+      "tomoMs": 122,
+      "precision": 0,
+      "techo": 0.8,
+      "rr": 0.16666666666666666,
+      "top": [
+        {
+          "codigo": "REU-A024",
+          "titulo": "pistola de calor con boquillas",
+          "relevante": false,
+          "score": null,
+          "distance": 0.593
+        },
+        {
+          "codigo": "REU-J039",
+          "titulo": "Humidificador para habitacion",
+          "relevante": false,
+          "score": null,
+          "distance": 0.622
+        },
+        {
+          "codigo": "REU-D036",
+          "titulo": "Vitrina refrigerada para negocio",
+          "relevante": false,
+          "score": null,
+          "distance": 0.646
+        },
+        {
+          "codigo": "REU-E061",
+          "titulo": "Calefactor ceramico para habitacion",
+          "relevante": false,
+          "score": null,
+          "distance": 0.651
+        },
+        {
+          "codigo": "REU-D037",
+          "titulo": "Dispensador de agua fria y caliente",
+          "relevante": false,
+          "score": null,
+          "distance": 0.653
+        }
+      ]
+    },
+    {
+      "q": "quiero aprender a tocar un instrumento",
+      "grupo": "semantica",
+      "alpha": 0,
+      "modo": "bm25",
+      "tomoMs": 92,
+      "precision": 0.2,
+      "techo": 1,
+      "rr": 0.3333333333333333,
+      "top": [
+        {
+          "codigo": "REU-D054",
+          "titulo": "Interfaz de audio dos canales",
+          "relevante": false,
+          "score": 2.444,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D059",
+          "titulo": "libros infantiles ilustrados",
+          "relevante": false,
+          "score": 2.382,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E031",
+          "titulo": "Teclado musical 61 teclas",
+          "relevante": true,
+          "score": 2.295,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A044",
+          "titulo": "escritorio pequeño para estudiar",
+          "relevante": false,
+          "score": 1.225,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A019",
+          "titulo": "Guantes de boxeo 14 onzas",
+          "relevante": false,
+          "score": 1.183,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "quiero aprender a tocar un instrumento",
+      "grupo": "semantica",
+      "alpha": 0.25,
+      "modo": "hybrid",
+      "tomoMs": 121,
+      "precision": 0.4,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E031",
+          "titulo": "Teclado musical 61 teclas",
+          "relevante": true,
+          "score": 0.933,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D054",
+          "titulo": "Interfaz de audio dos canales",
+          "relevante": false,
+          "score": 0.827,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D059",
+          "titulo": "libros infantiles ilustrados",
+          "relevante": false,
+          "score": 0.733,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A044",
+          "titulo": "escritorio pequeño para estudiar",
+          "relevante": false,
+          "score": 0.276,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E069",
+          "titulo": "Guitarra de nylon para principiantes",
+          "relevante": true,
+          "score": 0.2,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "quiero aprender a tocar un instrumento",
+      "grupo": "semantica",
+      "alpha": 0.5,
+      "modo": "hybrid",
+      "tomoMs": 128,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E031",
+          "titulo": "Teclado musical 61 teclas",
+          "relevante": true,
+          "score": 0.955,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D054",
+          "titulo": "Interfaz de audio dos canales",
+          "relevante": false,
+          "score": 0.653,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D059",
+          "titulo": "libros infantiles ilustrados",
+          "relevante": false,
+          "score": 0.503,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E069",
+          "titulo": "Guitarra de nylon para principiantes",
+          "relevante": true,
+          "score": 0.401,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A025",
+          "titulo": "Piano digital 88 teclas",
+          "relevante": true,
+          "score": 0.304,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "quiero aprender a tocar un instrumento",
+      "grupo": "semantica",
+      "alpha": 0.65,
+      "modo": "hybrid",
+      "tomoMs": 121,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E031",
+          "titulo": "Teclado musical 61 teclas",
+          "relevante": true,
+          "score": 0.969,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D054",
+          "titulo": "Interfaz de audio dos canales",
+          "relevante": false,
+          "score": 0.549,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E069",
+          "titulo": "Guitarra de nylon para principiantes",
+          "relevante": true,
+          "score": 0.521,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A025",
+          "titulo": "Piano digital 88 teclas",
+          "relevante": true,
+          "score": 0.381,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D059",
+          "titulo": "libros infantiles ilustrados",
+          "relevante": false,
+          "score": 0.365,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "quiero aprender a tocar un instrumento",
+      "grupo": "semantica",
+      "alpha": 0.75,
+      "modo": "hybrid",
+      "tomoMs": 121,
+      "precision": 0.8,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E031",
+          "titulo": "Teclado musical 61 teclas",
+          "relevante": true,
+          "score": 0.978,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E069",
+          "titulo": "Guitarra de nylon para principiantes",
+          "relevante": true,
+          "score": 0.601,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D054",
+          "titulo": "Interfaz de audio dos canales",
+          "relevante": false,
+          "score": 0.48,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A025",
+          "titulo": "Piano digital 88 teclas",
+          "relevante": true,
+          "score": 0.433,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D026",
+          "titulo": "saxofon alto con estuche",
+          "relevante": true,
+          "score": 0.389,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "quiero aprender a tocar un instrumento",
+      "grupo": "semantica",
+      "alpha": 1,
+      "modo": "vector",
+      "tomoMs": 123,
+      "precision": 1,
+      "techo": 1,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E031",
+          "titulo": "Teclado musical 61 teclas",
+          "relevante": true,
+          "score": null,
+          "distance": 0.647
+        },
+        {
+          "codigo": "REU-E069",
+          "titulo": "Guitarra de nylon para principiantes",
+          "relevante": true,
+          "score": null,
+          "distance": 0.709
+        },
+        {
+          "codigo": "REU-A025",
+          "titulo": "Piano digital 88 teclas",
+          "relevante": true,
+          "score": null,
+          "distance": 0.783
+        },
+        {
+          "codigo": "REU-D026",
+          "titulo": "saxofon alto con estuche",
+          "relevante": true,
+          "score": null,
+          "distance": 0.796
+        },
+        {
+          "codigo": "REU-J028",
+          "titulo": "violin 4/4 con estuche",
+          "relevante": true,
+          "score": null,
+          "distance": 0.809
+        }
+      ]
+    },
+    {
+      "q": "algo para mantener fria la comida",
+      "grupo": "semantica",
+      "alpha": 0,
+      "modo": "bm25",
+      "tomoMs": 92,
+      "precision": 0,
+      "techo": 1,
+      "rr": 0,
+      "top": [
+        {
+          "codigo": "REU-D037",
+          "titulo": "Dispensador de agua fria y caliente",
+          "relevante": false,
+          "score": 4.827,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D029",
+          "titulo": "Cobija termica doble faz",
+          "relevante": false,
+          "score": 2.906,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E046",
+          "titulo": "Juego de sabanas doble algodon",
+          "relevante": false,
+          "score": 2.8,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D027",
+          "titulo": "Abrigo de invierno con capota",
+          "relevante": false,
+          "score": 2.591,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J032",
+          "titulo": "Jaula para aves mediana",
+          "relevante": false,
+          "score": 1.437,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para mantener fria la comida",
+      "grupo": "semantica",
+      "alpha": 0.25,
+      "modo": "hybrid",
+      "tomoMs": 122,
+      "precision": 0,
+      "techo": 1,
+      "rr": 0.16666666666666666,
+      "top": [
+        {
+          "codigo": "REU-D037",
+          "titulo": "Dispensador de agua fria y caliente",
+          "relevante": false,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D029",
+          "titulo": "Cobija termica doble faz",
+          "relevante": false,
+          "score": 0.54,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D027",
+          "titulo": "Abrigo de invierno con capota",
+          "relevante": false,
+          "score": 0.413,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E046",
+          "titulo": "Juego de sabanas doble algodon",
+          "relevante": false,
+          "score": 0.388,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J051",
+          "titulo": "Silla de comer para bebe",
+          "relevante": false,
+          "score": 0.333,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para mantener fria la comida",
+      "grupo": "semantica",
+      "alpha": 0.5,
+      "modo": "hybrid",
+      "tomoMs": 124,
+      "precision": 0.4,
+      "techo": 1,
+      "rr": 0.3333333333333333,
+      "top": [
+        {
+          "codigo": "REU-D037",
+          "titulo": "Dispensador de agua fria y caliente",
+          "relevante": false,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D029",
+          "titulo": "Cobija termica doble faz",
+          "relevante": false,
+          "score": 0.536,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D068",
+          "titulo": "Mini nevera para carro",
+          "relevante": true,
+          "score": 0.509,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D036",
+          "titulo": "Vitrina refrigerada para negocio",
+          "relevante": true,
+          "score": 0.496,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D011",
+          "titulo": "Puff otomana con almacenamiento",
+          "relevante": false,
+          "score": 0.48,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para mantener fria la comida",
+      "grupo": "semantica",
+      "alpha": 0.65,
+      "modo": "hybrid",
+      "tomoMs": 123,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 0.5,
+      "top": [
+        {
+          "codigo": "REU-D037",
+          "titulo": "Dispensador de agua fria y caliente",
+          "relevante": false,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D036",
+          "titulo": "Vitrina refrigerada para negocio",
+          "relevante": true,
+          "score": 0.645,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D011",
+          "titulo": "Puff otomana con almacenamiento",
+          "relevante": false,
+          "score": 0.624,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D068",
+          "titulo": "Mini nevera para carro",
+          "relevante": true,
+          "score": 0.616,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J005",
+          "titulo": "Nevecon dos puertas no frost",
+          "relevante": true,
+          "score": 0.613,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para mantener fria la comida",
+      "grupo": "semantica",
+      "alpha": 0.75,
+      "modo": "hybrid",
+      "tomoMs": 123,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 0.5,
+      "top": [
+        {
+          "codigo": "REU-D037",
+          "titulo": "Dispensador de agua fria y caliente",
+          "relevante": false,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D036",
+          "titulo": "Vitrina refrigerada para negocio",
+          "relevante": true,
+          "score": 0.744,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D011",
+          "titulo": "Puff otomana con almacenamiento",
+          "relevante": false,
+          "score": 0.72,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J005",
+          "titulo": "Nevecon dos puertas no frost",
+          "relevante": true,
+          "score": 0.707,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D068",
+          "titulo": "Mini nevera para carro",
+          "relevante": true,
+          "score": 0.688,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "algo para mantener fria la comida",
+      "grupo": "semantica",
+      "alpha": 1,
+      "modo": "vector",
+      "tomoMs": 125,
+      "precision": 0.6,
+      "techo": 1,
+      "rr": 0.5,
+      "top": [
+        {
+          "codigo": "REU-D037",
+          "titulo": "Dispensador de agua fria y caliente",
+          "relevante": false,
+          "score": null,
+          "distance": 0.654
+        },
+        {
+          "codigo": "REU-D036",
+          "titulo": "Vitrina refrigerada para negocio",
+          "relevante": true,
+          "score": null,
+          "distance": 0.655
+        },
+        {
+          "codigo": "REU-D011",
+          "titulo": "Puff otomana con almacenamiento",
+          "relevante": false,
+          "score": null,
+          "distance": 0.662
+        },
+        {
+          "codigo": "REU-J005",
+          "titulo": "Nevecon dos puertas no frost",
+          "relevante": true,
+          "score": null,
+          "distance": 0.665
+        },
+        {
+          "codigo": "REU-D068",
+          "titulo": "Mini nevera para carro",
+          "relevante": true,
+          "score": null,
+          "distance": 0.679
+        }
+      ]
+    },
+    {
+      "q": "iPhone 13 Pro Max 256GB",
+      "grupo": "exacta",
+      "alpha": 0,
+      "modo": "bm25",
+      "tomoMs": 91,
+      "precision": 0.4,
+      "techo": 0.4,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E016",
+          "titulo": "iPhone 13 Pro Max 256GB",
+          "relevante": true,
+          "score": 20.718,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E066",
+          "titulo": "Celular Apple 13 Pro Max 256 gigas",
+          "relevante": true,
+          "score": 13.117,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E059",
+          "titulo": "Bateria de carro 13 placas",
+          "relevante": false,
+          "score": 3.782,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E015",
+          "titulo": "Portatil Lenovo i5 8GB RAM",
+          "relevante": false,
+          "score": 2.188,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "iPhone 13 Pro Max 256GB",
+      "grupo": "exacta",
+      "alpha": 0.25,
+      "modo": "hybrid",
+      "tomoMs": 119,
+      "precision": 0.4,
+      "techo": 0.4,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E016",
+          "titulo": "iPhone 13 Pro Max 256GB",
+          "relevante": true,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E066",
+          "titulo": "Celular Apple 13 Pro Max 256 gigas",
+          "relevante": true,
+          "score": 0.68,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E059",
+          "titulo": "Bateria de carro 13 placas",
+          "relevante": false,
+          "score": 0.101,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A010",
+          "titulo": "Celular Samsung 128GB",
+          "relevante": false,
+          "score": 0.074,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D015",
+          "titulo": "memoria usb 128 gigas",
+          "relevante": false,
+          "score": 0.073,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "iPhone 13 Pro Max 256GB",
+      "grupo": "exacta",
+      "alpha": 0.5,
+      "modo": "hybrid",
+      "tomoMs": 129,
+      "precision": 0.4,
+      "techo": 0.4,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E016",
+          "titulo": "iPhone 13 Pro Max 256GB",
+          "relevante": true,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E066",
+          "titulo": "Celular Apple 13 Pro Max 256 gigas",
+          "relevante": true,
+          "score": 0.769,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A010",
+          "titulo": "Celular Samsung 128GB",
+          "relevante": false,
+          "score": 0.147,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D015",
+          "titulo": "memoria usb 128 gigas",
+          "relevante": false,
+          "score": 0.146,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J014",
+          "titulo": "portatil hp para estudiar",
+          "relevante": false,
+          "score": 0.119,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "iPhone 13 Pro Max 256GB",
+      "grupo": "exacta",
+      "alpha": 0.65,
+      "modo": "hybrid",
+      "tomoMs": 131,
+      "precision": 0.4,
+      "techo": 0.4,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E016",
+          "titulo": "iPhone 13 Pro Max 256GB",
+          "relevante": true,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E066",
+          "titulo": "Celular Apple 13 Pro Max 256 gigas",
+          "relevante": true,
+          "score": 0.823,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A010",
+          "titulo": "Celular Samsung 128GB",
+          "relevante": false,
+          "score": 0.191,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D015",
+          "titulo": "memoria usb 128 gigas",
+          "relevante": false,
+          "score": 0.19,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J014",
+          "titulo": "portatil hp para estudiar",
+          "relevante": false,
+          "score": 0.155,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "iPhone 13 Pro Max 256GB",
+      "grupo": "exacta",
+      "alpha": 0.75,
+      "modo": "hybrid",
+      "tomoMs": 121,
+      "precision": 0.4,
+      "techo": 0.4,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E016",
+          "titulo": "iPhone 13 Pro Max 256GB",
+          "relevante": true,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E066",
+          "titulo": "Celular Apple 13 Pro Max 256 gigas",
+          "relevante": true,
+          "score": 0.859,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A010",
+          "titulo": "Celular Samsung 128GB",
+          "relevante": false,
+          "score": 0.221,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D015",
+          "titulo": "memoria usb 128 gigas",
+          "relevante": false,
+          "score": 0.219,
+          "distance": null
+        },
+        {
+          "codigo": "REU-J014",
+          "titulo": "portatil hp para estudiar",
+          "relevante": false,
+          "score": 0.179,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "iPhone 13 Pro Max 256GB",
+      "grupo": "exacta",
+      "alpha": 1,
+      "modo": "vector",
+      "tomoMs": 118,
+      "precision": 0.4,
+      "techo": 0.4,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-E016",
+          "titulo": "iPhone 13 Pro Max 256GB",
+          "relevante": true,
+          "score": null,
+          "distance": 0.309
+        },
+        {
+          "codigo": "REU-E066",
+          "titulo": "Celular Apple 13 Pro Max 256 gigas",
+          "relevante": true,
+          "score": null,
+          "distance": 0.343
+        },
+        {
+          "codigo": "REU-A010",
+          "titulo": "Celular Samsung 128GB",
+          "relevante": false,
+          "score": null,
+          "distance": 0.779
+        },
+        {
+          "codigo": "REU-D015",
+          "titulo": "memoria usb 128 gigas",
+          "relevante": false,
+          "score": null,
+          "distance": 0.781
+        },
+        {
+          "codigo": "REU-J014",
+          "titulo": "portatil hp para estudiar",
+          "relevante": false,
+          "score": null,
+          "distance": 0.817
+        }
+      ]
+    },
+    {
+      "q": "botas talla 39",
+      "grupo": "exacta",
+      "alpha": 0,
+      "modo": "bm25",
+      "tomoMs": 93,
+      "precision": 0.2,
+      "techo": 0.2,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-J057",
+          "titulo": "Botas de cuero talla 39",
+          "relevante": true,
+          "score": 10.977,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E034",
+          "titulo": "Botas de seguridad talla 42",
+          "relevante": false,
+          "score": 6.667,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A061",
+          "titulo": "Sudadera deportiva talla l",
+          "relevante": false,
+          "score": 2.701,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D028",
+          "titulo": "Tenis deportivos talla 40",
+          "relevante": false,
+          "score": 2.682,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D056",
+          "titulo": "uniformes escolares talla 12",
+          "relevante": false,
+          "score": 2.609,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "botas talla 39",
+      "grupo": "exacta",
+      "alpha": 0.25,
+      "modo": "hybrid",
+      "tomoMs": 125,
+      "precision": 0.2,
+      "techo": 0.2,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-J057",
+          "titulo": "Botas de cuero talla 39",
+          "relevante": true,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E034",
+          "titulo": "Botas de seguridad talla 42",
+          "relevante": false,
+          "score": 0.596,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D028",
+          "titulo": "Tenis deportivos talla 40",
+          "relevante": false,
+          "score": 0.246,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E054",
+          "titulo": "Patines en linea talla 38",
+          "relevante": false,
+          "score": 0.222,
+          "distance": null
+        },
+        {
+          "codigo": "REU-A062",
+          "titulo": "jeans talla 32 varios",
+          "relevante": false,
+          "score": 0.2,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "botas talla 39",
+      "grupo": "exacta",
+      "alpha": 0.5,
+      "modo": "hybrid",
+      "tomoMs": 124,
+      "precision": 0.2,
+      "techo": 0.2,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-J057",
+          "titulo": "Botas de cuero talla 39",
+          "relevante": true,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E034",
+          "titulo": "Botas de seguridad talla 42",
+          "relevante": false,
+          "score": 0.629,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D028",
+          "titulo": "Tenis deportivos talla 40",
+          "relevante": false,
+          "score": 0.335,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E054",
+          "titulo": "Patines en linea talla 38",
+          "relevante": false,
+          "score": 0.318,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D017",
+          "titulo": "Bicicleta de ruta talla 54",
+          "relevante": false,
+          "score": 0.253,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "botas talla 39",
+      "grupo": "exacta",
+      "alpha": 0.65,
+      "modo": "hybrid",
+      "tomoMs": 122,
+      "precision": 0.2,
+      "techo": 0.2,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-J057",
+          "titulo": "Botas de cuero talla 39",
+          "relevante": true,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E034",
+          "titulo": "Botas de seguridad talla 42",
+          "relevante": false,
+          "score": 0.649,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D028",
+          "titulo": "Tenis deportivos talla 40",
+          "relevante": false,
+          "score": 0.388,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E054",
+          "titulo": "Patines en linea talla 38",
+          "relevante": false,
+          "score": 0.376,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D017",
+          "titulo": "Bicicleta de ruta talla 54",
+          "relevante": false,
+          "score": 0.287,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "botas talla 39",
+      "grupo": "exacta",
+      "alpha": 0.75,
+      "modo": "hybrid",
+      "tomoMs": 139,
+      "precision": 0.2,
+      "techo": 0.2,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-J057",
+          "titulo": "Botas de cuero talla 39",
+          "relevante": true,
+          "score": 1,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E034",
+          "titulo": "Botas de seguridad talla 42",
+          "relevante": false,
+          "score": 0.662,
+          "distance": null
+        },
+        {
+          "codigo": "REU-D028",
+          "titulo": "Tenis deportivos talla 40",
+          "relevante": false,
+          "score": 0.424,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E054",
+          "titulo": "Patines en linea talla 38",
+          "relevante": false,
+          "score": 0.414,
+          "distance": null
+        },
+        {
+          "codigo": "REU-E021",
+          "titulo": "Bicicleta todoterreno rin 29",
+          "relevante": false,
+          "score": 0.325,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "q": "botas talla 39",
+      "grupo": "exacta",
+      "alpha": 1,
+      "modo": "vector",
+      "tomoMs": 127,
+      "precision": 0.2,
+      "techo": 0.2,
+      "rr": 1,
+      "top": [
+        {
+          "codigo": "REU-J057",
+          "titulo": "Botas de cuero talla 39",
+          "relevante": true,
+          "score": null,
+          "distance": 0.41
+        },
+        {
+          "codigo": "REU-E034",
+          "titulo": "Botas de seguridad talla 42",
+          "relevante": false,
+          "score": null,
+          "distance": 0.567
+        },
+        {
+          "codigo": "REU-D028",
+          "titulo": "Tenis deportivos talla 40",
+          "relevante": false,
+          "score": null,
+          "distance": 0.662
+        },
+        {
+          "codigo": "REU-E054",
+          "titulo": "Patines en linea talla 38",
+          "relevante": false,
+          "score": null,
+          "distance": 0.663
+        },
+        {
+          "codigo": "REU-E021",
+          "titulo": "Bicicleta todoterreno rin 29",
+          "relevante": false,
+          "score": null,
+          "distance": 0.705
+        }
+      ]
+    }
+  ]
+}

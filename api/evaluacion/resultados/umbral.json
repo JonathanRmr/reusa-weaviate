@@ -1,0 +1,741 @@
+{
+  "generado": "2026-10-26T00:57:32.293Z",
+  "desfase": 1.4264205849823242e-7,
+  "pares": [
+    {
+      "codigoA": "REU-E001",
+      "codigoB": "REU-E061",
+      "relacion": "republicacion",
+      "nota": "Mismo calefactor electrico reescrito sin mayusculas ni datos de contacto",
+      "tituloA": "Vendo calefactor casi nuevo barato",
+      "tituloB": "Calefactor ceramico para habitacion",
+      "mismaCiudad": true,
+      "proporcionPrecio": 0.9583333333333334,
+      "distancia": 0.27082268901763906,
+      "distanciaServidor": 0.2708226442337036,
+      "puestoEnSimilares": 1
+    },
+    {
+      "codigoA": "REU-E002",
+      "codigoB": "REU-E062",
+      "relacion": "republicacion",
+      "nota": "Nevera de 92 litros republicada como tipo minibar",
+      "tituloA": "Nevera pequeña para apartaestudio",
+      "tituloB": "Nevera 92 litros tipo minibar",
+      "mismaCiudad": true,
+      "proporcionPrecio": 0.9777777777777777,
+      "distancia": 0.14291360337356485,
+      "distanciaServidor": 0.14291346073150635,
+      "puestoEnSimilares": 1
+    },
+    {
+      "codigoA": "REU-E008",
+      "codigoB": "REU-E063",
+      "relacion": "republicacion",
+      "nota": "Sofa de 3 puestos en tela gris descrito como mueble de sala",
+      "tituloA": "Sofa de 3 puestos tela gris",
+      "tituloB": "Mueble de sala tres puestos",
+      "mismaCiudad": true,
+      "proporcionPrecio": 0.9636363636363636,
+      "distancia": 0.1805157485233747,
+      "distanciaServidor": 0.18051564693450928,
+      "puestoEnSimilares": 1
+    },
+    {
+      "codigoA": "REU-E009",
+      "codigoB": "REU-E064",
+      "relacion": "republicacion",
+      "nota": "Closet de madera republicado como armario para guardar ropa",
+      "tituloA": "Closet de madera 2 puertas",
+      "tituloB": "armario en madera con entrepaños",
+      "mismaCiudad": true,
+      "proporcionPrecio": 0.96875,
+      "distancia": 0.24864764733686995,
+      "distanciaServidor": 0.24864763021469116,
+      "puestoEnSimilares": 1
+    },
+    {
+      "codigoA": "REU-E015",
+      "codigoB": "REU-E065",
+      "relacion": "republicacion",
+      "nota": "Portatil Lenovo i5 con las especificaciones escritas en palabras",
+      "tituloA": "Portatil Lenovo i5 8GB RAM",
+      "tituloB": "Portatil lenovo para estudiar o trabajar",
+      "mismaCiudad": true,
+      "proporcionPrecio": 0.9655172413793104,
+      "distancia": 0.13650888520788784,
+      "distanciaServidor": 0.13650888204574585,
+      "puestoEnSimilares": 1
+    },
+    {
+      "codigoA": "REU-E016",
+      "codigoB": "REU-E066",
+      "relacion": "republicacion",
+      "nota": "iPhone 13 Pro Max publicado como Celular Apple",
+      "tituloA": "iPhone 13 Pro Max 256GB",
+      "tituloB": "Celular Apple 13 Pro Max 256 gigas",
+      "mismaCiudad": true,
+      "proporcionPrecio": 0.9807692307692307,
+      "distancia": 0.11222936975902176,
+      "distanciaServidor": 0.1122293472290039,
+      "puestoEnSimilares": 1
+    },
+    {
+      "codigoA": "REU-E021",
+      "codigoB": "REU-E067",
+      "relacion": "republicacion",
+      "nota": "Bicicleta rin 29 republicada como bici montañera",
+      "tituloA": "Bicicleta todoterreno rin 29",
+      "tituloB": "bici montañera rin 29 aluminio",
+      "mismaCiudad": true,
+      "proporcionPrecio": 0.9558823529411765,
+      "distancia": 0.16022924307620268,
+      "distanciaServidor": 0.16022926568984985,
+      "puestoEnSimilares": 1
+    },
+    {
+      "codigoA": "REU-E027",
+      "codigoB": "REU-E068",
+      "relacion": "republicacion",
+      "nota": "Taladro percutor de media pulgada con el mismo maletin y brocas",
+      "tituloA": "Taladro percutor 1/2 pulgada",
+      "tituloB": "Taladro percutor con maletin y brocas",
+      "mismaCiudad": true,
+      "proporcionPrecio": 0.9722222222222222,
+      "distancia": 0.09941259351763099,
+      "distanciaServidor": 0.09941256046295166,
+      "puestoEnSimilares": 1
+    },
+    {
+      "codigoA": "REU-E030",
+      "codigoB": "REU-E069",
+      "relacion": "republicacion",
+      "nota": "Guitarra de cuerdas de nylon con el mismo estuche y capotraste",
+      "tituloA": "Guitarra acustica con funda",
+      "tituloB": "Guitarra de nylon para principiantes",
+      "mismaCiudad": true,
+      "proporcionPrecio": 0.9375,
+      "distancia": 0.1902981820291456,
+      "distanciaServidor": 0.19029808044433594,
+      "puestoEnSimilares": 1
+    },
+    {
+      "codigoA": "REU-E041",
+      "codigoB": "REU-E070",
+      "relacion": "republicacion",
+      "nota": "Moto 125 modelo 2019 con los mismos kilometros y papeles",
+      "tituloA": "moto 125 modelo 2019 papeles al dia",
+      "tituloB": "Moto 125cc 2019 con soat y tecno",
+      "mismaCiudad": true,
+      "proporcionPrecio": 0.9895833333333334,
+      "distancia": 0.09469235700827883,
+      "distanciaServidor": 0.09469234943389893,
+      "puestoEnSimilares": 1
+    },
+    {
+      "codigoA": "REU-E003",
+      "codigoB": "REU-E004",
+      "relacion": "distinto",
+      "nota": "Lavadora y estufa a gas: misma categoria articulos distintos",
+      "tituloA": "lavadora 10 kilos marca haceb",
+      "tituloB": "Estufa de 4 puestos a gas",
+      "mismaCiudad": false,
+      "proporcionPrecio": 0.23076923076923078,
+      "distancia": 0.709122264681915,
+      "distanciaServidor": null,
+      "puestoEnSimilares": null
+    },
+    {
+      "codigoA": "REU-E005",
+      "codigoB": "REU-E006",
+      "relacion": "distinto",
+      "nota": "Microondas y licuadora: misma categoria articulos distintos",
+      "tituloA": "Microondas 20 litros poco uso",
+      "tituloB": "Licuadora de vaso de vidrio",
+      "mismaCiudad": false,
+      "proporcionPrecio": 0.43333333333333335,
+      "distancia": 0.5252732368822688,
+      "distanciaServidor": 0.5252732038497925,
+      "puestoEnSimilares": 9
+    },
+    {
+      "codigoA": "REU-E010",
+      "codigoB": "REU-E011",
+      "relacion": "distinto",
+      "nota": "Escritorio y comedor: misma categoria articulos distintos",
+      "tituloA": "Escritorio con cajonera",
+      "tituloB": "mesa de comedor 4 sillas",
+      "mismaCiudad": false,
+      "proporcionPrecio": 0.525,
+      "distancia": 0.43919473992181945,
+      "distanciaServidor": 0.4391946792602539,
+      "puestoEnSimilares": 5
+    },
+    {
+      "codigoA": "REU-E012",
+      "codigoB": "REU-E013",
+      "relacion": "distinto",
+      "nota": "Cama doble y biblioteca: misma categoria articulos distintos",
+      "tituloA": "Cama doble con base cama",
+      "tituloB": "Biblioteca 5 entrepaños",
+      "mismaCiudad": false,
+      "proporcionPrecio": 0.22580645161290322,
+      "distancia": 0.644610560158363,
+      "distanciaServidor": null,
+      "puestoEnSimilares": null
+    },
+    {
+      "codigoA": "REU-E017",
+      "codigoB": "REU-E018",
+      "relacion": "distinto",
+      "nota": "Monitor e impresora: misma categoria articulos distintos",
+      "tituloA": "Monitor 24 pulgadas full hd",
+      "tituloB": "impresora multifuncional epson",
+      "mismaCiudad": false,
+      "proporcionPrecio": 0.7428571428571429,
+      "distancia": 0.6869739836619606,
+      "distanciaServidor": null,
+      "puestoEnSimilares": null
+    },
+    {
+      "codigoA": "REU-E019",
+      "codigoB": "REU-E020",
+      "relacion": "distinto",
+      "nota": "Teclado mecanico y televisor: misma categoria articulos distintos",
+      "tituloA": "Teclado mecanico switches azules",
+      "tituloB": "Televisor 43 pulgadas smart tv",
+      "mismaCiudad": false,
+      "proporcionPrecio": 0.15294117647058825,
+      "distancia": 0.6514342265475956,
+      "distanciaServidor": null,
+      "puestoEnSimilares": null
+    },
+    {
+      "codigoA": "REU-E022",
+      "codigoB": "REU-E023",
+      "relacion": "distinto",
+      "nota": "Caminadora y mancuernas: misma categoria articulos distintos",
+      "tituloA": "Caminadora electrica plegable",
+      "tituloB": "set de mancuernas 20 kilos",
+      "mismaCiudad": false,
+      "proporcionPrecio": 0.11578947368421053,
+      "distancia": 0.6518235425259169,
+      "distanciaServidor": null,
+      "puestoEnSimilares": null
+    },
+    {
+      "codigoA": "REU-E028",
+      "codigoB": "REU-E029",
+      "relacion": "distinto",
+      "nota": "Pulidora y caja de herramientas: misma categoria articulos distintos",
+      "tituloA": "Pulidora angular 4 1/2",
+      "tituloB": "caja de herramientas 120 piezas",
+      "mismaCiudad": false,
+      "proporcionPrecio": 0.90625,
+      "distancia": 0.5750653434963771,
+      "distanciaServidor": null,
+      "puestoEnSimilares": null
+    },
+    {
+      "codigoA": "REU-E036",
+      "codigoB": "REU-E038",
+      "relacion": "distinto",
+      "nota": "Guacal para perro y acuario: misma categoria articulos distintos",
+      "tituloA": "Guacal para perro mediano",
+      "tituloB": "acuario 60 litros con filtro",
+      "mismaCiudad": false,
+      "proporcionPrecio": 0.6,
+      "distancia": 0.654982343376316,
+      "distanciaServidor": null,
+      "puestoEnSimilares": null
+    },
+    {
+      "codigoA": "REU-E044",
+      "codigoB": "REU-E045",
+      "relacion": "distinto",
+      "nota": "Alfombra y cortinas blackout: misma categoria articulos distintos",
+      "tituloA": "Alfombra grande para sala",
+      "tituloB": "cortinas blackout dos paños",
+      "mismaCiudad": false,
+      "proporcionPrecio": 0.59375,
+      "distancia": 0.5914293635526721,
+      "distanciaServidor": null,
+      "puestoEnSimilares": null
+    }
+  ],
+  "reglas": [
+    {
+      "nombre": "A1 · solo distancia, corte de los 20 pares de referencia",
+      "corte": {
+        "corte": 0.35500871446972926,
+        "separables": true,
+        "hueco": [
+          0.27082268901763906,
+          0.43919473992181945
+        ],
+        "falsosNegativos": 0,
+        "falsosPositivos": 0
+      },
+      "conAtributos": false,
+      "republicacionesDetectadas": 10,
+      "controlesMarcados": 0,
+      "paresFalsos": 36,
+      "publicacionesConInsigniaFalsa": 59
+    },
+    {
+      "nombre": "A2 · solo distancia, corte con todo el catálogo",
+      "corte": {
+        "corte": 0.20785493431776703,
+        "falsosNegativos": 2,
+        "falsosPositivos": 1,
+        "separables": false,
+        "hueco": null
+      },
+      "conAtributos": false,
+      "republicacionesDetectadas": 8,
+      "controlesMarcados": 0,
+      "paresFalsos": 1,
+      "publicacionesConInsigniaFalsa": 2
+    },
+    {
+      "nombre": "B · distancia + misma ciudad + precio a ±20 % (calibrada)",
+      "corte": {
+        "corte": 0.29298175630750994,
+        "separables": true,
+        "hueco": [
+          0.27082268901763906,
+          0.3151408235973808
+        ],
+        "falsosNegativos": 0,
+        "falsosPositivos": 0
+      },
+      "conAtributos": true,
+      "republicacionesDetectadas": 10,
+      "controlesMarcados": 0,
+      "paresFalsos": 0,
+      "publicacionesConInsigniaFalsa": 0
+    }
+  ],
+  "vigente": {
+    "umbral": 0.29,
+    "tolerancia": 0.8,
+    "republicacionesDetectadas": 10,
+    "controlesMarcados": 0,
+    "paresFalsos": 0,
+    "publicacionesConInsigniaFalsa": 0
+  },
+  "sensibilidad": [
+    {
+      "corte": 0.2,
+      "soloDistancia": {
+        "republicacionesDetectadas": 8,
+        "controlesMarcados": 0,
+        "paresFalsos": 1,
+        "publicacionesConInsigniaFalsa": 2
+      },
+      "tolerancia0.7": {
+        "republicacionesDetectadas": 8,
+        "controlesMarcados": 0,
+        "paresFalsos": 0,
+        "publicacionesConInsigniaFalsa": 0
+      },
+      "tolerancia0.8": {
+        "republicacionesDetectadas": 8,
+        "controlesMarcados": 0,
+        "paresFalsos": 0,
+        "publicacionesConInsigniaFalsa": 0
+      },
+      "tolerancia0.9": {
+        "republicacionesDetectadas": 8,
+        "controlesMarcados": 0,
+        "paresFalsos": 0,
+        "publicacionesConInsigniaFalsa": 0
+      }
+    },
+    {
+      "corte": 0.25,
+      "soloDistancia": {
+        "republicacionesDetectadas": 9,
+        "controlesMarcados": 0,
+        "paresFalsos": 3,
+        "publicacionesConInsigniaFalsa": 6
+      },
+      "tolerancia0.7": {
+        "republicacionesDetectadas": 9,
+        "controlesMarcados": 0,
+        "paresFalsos": 0,
+        "publicacionesConInsigniaFalsa": 0
+      },
+      "tolerancia0.8": {
+        "republicacionesDetectadas": 9,
+        "controlesMarcados": 0,
+        "paresFalsos": 0,
+        "publicacionesConInsigniaFalsa": 0
+      },
+      "tolerancia0.9": {
+        "republicacionesDetectadas": 9,
+        "controlesMarcados": 0,
+        "paresFalsos": 0,
+        "publicacionesConInsigniaFalsa": 0
+      }
+    },
+    {
+      "corte": 0.3,
+      "soloDistancia": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 15,
+        "publicacionesConInsigniaFalsa": 28
+      },
+      "tolerancia0.7": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 0,
+        "publicacionesConInsigniaFalsa": 0
+      },
+      "tolerancia0.8": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 0,
+        "publicacionesConInsigniaFalsa": 0
+      },
+      "tolerancia0.9": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 0,
+        "publicacionesConInsigniaFalsa": 0
+      }
+    },
+    {
+      "corte": 0.35,
+      "soloDistancia": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 36,
+        "publicacionesConInsigniaFalsa": 59
+      },
+      "tolerancia0.7": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 1,
+        "publicacionesConInsigniaFalsa": 2
+      },
+      "tolerancia0.8": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 1,
+        "publicacionesConInsigniaFalsa": 2
+      },
+      "tolerancia0.9": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 1,
+        "publicacionesConInsigniaFalsa": 2
+      }
+    },
+    {
+      "corte": 0.4,
+      "soloDistancia": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 87,
+        "publicacionesConInsigniaFalsa": 118
+      },
+      "tolerancia0.7": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 3,
+        "publicacionesConInsigniaFalsa": 6
+      },
+      "tolerancia0.8": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 2,
+        "publicacionesConInsigniaFalsa": 4
+      },
+      "tolerancia0.9": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 2,
+        "publicacionesConInsigniaFalsa": 4
+      }
+    },
+    {
+      "corte": 0.45,
+      "soloDistancia": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 1,
+        "paresFalsos": 220,
+        "publicacionesConInsigniaFalsa": 201
+      },
+      "tolerancia0.7": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 13,
+        "publicacionesConInsigniaFalsa": 26
+      },
+      "tolerancia0.8": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 9,
+        "publicacionesConInsigniaFalsa": 18
+      },
+      "tolerancia0.9": {
+        "republicacionesDetectadas": 10,
+        "controlesMarcados": 0,
+        "paresFalsos": 2,
+        "publicacionesConInsigniaFalsa": 4
+      }
+    }
+  ],
+  "catalogo": {
+    "publicaciones": 272,
+    "pares": 36856,
+    "minimoDistintos": 0.15744260315488556,
+    "p1": 0.47609962625687785,
+    "p5": 0.556584761769936,
+    "mediana": 0.6899773081277258
+  },
+  "paraRevisar": [
+    {
+      "distancia": 0.15744260315488556,
+      "codigoA": "REU-D043",
+      "tituloA": "Consola de videojuegos con 4 mandos",
+      "ciudadA": "Medellin",
+      "precioA": 1250000,
+      "codigoB": "REU-E051",
+      "tituloB": "Consola de videojuegos con dos mandos",
+      "ciudadB": "Bogota",
+      "precioB": 950000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.22541168660638844,
+      "codigoA": "REU-E053",
+      "tituloA": "colchon sencillo ortopedico",
+      "ciudadA": "Cali",
+      "precioA": 280000,
+      "codigoB": "REU-D042",
+      "tituloB": "Colchon doble ortopedico",
+      "ciudadB": "Bogota",
+      "precioB": 680000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.2337469882451636,
+      "codigoA": "REU-E038",
+      "tituloA": "acuario 60 litros con filtro",
+      "ciudadA": "Cali",
+      "precioA": 200000,
+      "codigoB": "REU-A063",
+      "tituloB": "Acuario plantado 100 litros",
+      "ciudadB": "Bogota",
+      "precioB": 780000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.25136259404318917,
+      "codigoA": "REU-A007",
+      "tituloA": "Cama nido con cajones",
+      "ciudadA": "Bogota",
+      "precioA": 520000,
+      "codigoB": "REU-A045",
+      "tituloB": "Base cama sencilla con cajones",
+      "ciudadB": "Tunja",
+      "precioB": 280000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.25158470130410704,
+      "codigoA": "REU-E011",
+      "tituloA": "mesa de comedor 4 sillas",
+      "ciudadA": "Cali",
+      "precioA": 400000,
+      "codigoB": "REU-J009",
+      "tituloB": "juego de comedor 6 puestos",
+      "ciudadB": "Medellin",
+      "precioB": 750000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.254895068903244,
+      "codigoA": "REU-A033",
+      "tituloA": "comics y novelas graficas",
+      "ciudadA": "Medellin",
+      "precioA": 200000,
+      "codigoB": "REU-E040",
+      "tituloB": "Saga completa de novelas",
+      "ciudadB": "Bogota",
+      "precioB": 220000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.2734528543682766,
+      "codigoA": "REU-E031",
+      "tituloA": "Teclado musical 61 teclas",
+      "ciudadA": "Bogota",
+      "precioA": 310000,
+      "codigoB": "REU-A025",
+      "tituloB": "Piano digital 88 teclas",
+      "ciudadB": "Bogota",
+      "precioB": 1600000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.2773941027329957,
+      "codigoA": "REU-A001",
+      "tituloA": "Licuadora industrial 2 litros",
+      "ciudadA": "Bucaramanga",
+      "precioA": 290000,
+      "codigoB": "REU-E006",
+      "tituloB": "Licuadora de vaso de vidrio",
+      "ciudadB": "Tunja",
+      "precioB": 65000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.28785453699496044,
+      "codigoA": "REU-E056",
+      "tituloA": "ventilador de techo con control",
+      "ciudadA": "Villavicencio",
+      "precioA": 160000,
+      "codigoB": "REU-A005",
+      "tituloB": "Ventilador de torre silencioso",
+      "ciudadB": "Cali",
+      "precioB": 140000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.2881220327121531,
+      "codigoA": "REU-J001",
+      "tituloA": "Estufa industrial 2 puestos",
+      "ciudadA": "Bogota",
+      "precioA": 420000,
+      "codigoB": "REU-E047",
+      "tituloB": "Estufa electrica portatil 2 puestos",
+      "ciudadB": "Sogamoso",
+      "precioB": 75000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.2891877029035943,
+      "codigoA": "REU-D001",
+      "tituloA": "Lavadora secadora dos en uno",
+      "ciudadA": "Bogota",
+      "precioA": 1450000,
+      "codigoB": "REU-A002",
+      "tituloB": "Secadora de ropa 22 libras",
+      "ciudadB": "Bogota",
+      "precioB": 890000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.2911262460109143,
+      "codigoA": "REU-E015",
+      "tituloA": "Portatil Lenovo i5 8GB RAM",
+      "ciudadA": "Bogota",
+      "precioA": 1450000,
+      "codigoB": "REU-J014",
+      "tituloB": "portatil hp para estudiar",
+      "ciudadB": "Tunja",
+      "precioB": 1100000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.29323111610759556,
+      "codigoA": "REU-A036",
+      "tituloA": "Estufa de leña para finca",
+      "ciudadA": "Duitama",
+      "precioA": 450000,
+      "codigoB": "REU-J001",
+      "tituloB": "Estufa industrial 2 puestos",
+      "ciudadB": "Bogota",
+      "precioB": 420000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.2951357861537466,
+      "codigoA": "REU-E065",
+      "tituloA": "Portatil lenovo para estudiar o trabajar",
+      "ciudadA": "Bogota",
+      "precioA": 1400000,
+      "codigoB": "REU-J014",
+      "tituloB": "portatil hp para estudiar",
+      "ciudadB": "Tunja",
+      "precioB": 1100000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.2967284311893448,
+      "codigoA": "REU-D018",
+      "tituloA": "casco de ciclismo talla M",
+      "ciudadA": "Bogota",
+      "precioA": 85000,
+      "codigoB": "REU-J034",
+      "tituloB": "Casco para moto certificado",
+      "ciudadB": "Bogota",
+      "precioB": 260000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.3020457761896055,
+      "codigoA": "REU-E005",
+      "tituloA": "Microondas 20 litros poco uso",
+      "ciudadA": "Bogota",
+      "precioA": 150000,
+      "codigoB": "REU-J037",
+      "tituloB": "Horno microondas grande 34 litros",
+      "ciudadB": "Medellin",
+      "precioB": 280000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.30431575632870644,
+      "codigoA": "REU-A012",
+      "tituloA": "mouse inalambrico ergonomico",
+      "ciudadA": "Tunja",
+      "precioA": 70000,
+      "codigoB": "REU-A049",
+      "tituloB": "Teclado y mouse inalambricos",
+      "ciudadB": "Bogota",
+      "precioB": 80000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.31252082562925154,
+      "codigoA": "REU-E026",
+      "tituloA": "silla para carro de bebe",
+      "ciudadA": "Cali",
+      "precioA": 150000,
+      "codigoB": "REU-D047",
+      "tituloB": "asiento elevador para niñ",
+      "ciudadB": "Villavicencio",
+      "precioB": 80000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.3151408235973808,
+      "codigoA": "REU-E012",
+      "tituloA": "Cama doble con base cama",
+      "ciudadA": "Bogota",
+      "precioA": 620000,
+      "codigoB": "REU-D042",
+      "tituloB": "Colchon doble ortopedico",
+      "ciudadB": "Bogota",
+      "precioB": 680000,
+      "marcadoPorLaReglaVigente": false
+    },
+    {
+      "distancia": 0.31959512193572026,
+      "codigoA": "REU-J061",
+      "tituloA": "Enciclopedia de medicina 4 tomos",
+      "ciudadA": "Sogamoso",
+      "precioA": 230000,
+      "codigoB": "REU-A065",
+      "tituloB": "diccionario enciclopedico ilustrado",
+      "ciudadB": "Sogamoso",
+      "precioB": 80000,
+      "marcadoPorLaReglaVigente": false
+    }
+  ]
+}

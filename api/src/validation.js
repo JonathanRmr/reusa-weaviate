@@ -12,14 +12,19 @@ function aEnteroOIndefinido(valor) {
   return Number.isInteger(n) ? n : NaN;
 }
 
+// Fijado por la evaluación de la Fase 3 (docs/evaluacion.md §2), no asumido: Precision@5
+// crece con alpha en las 10 consultas medidas y alpha = 1 no pierde en ninguna, ni siquiera
+// en las de modelo exacto. Con 0.65 la consulta estrella de la demo sacaba 0 de 5.
+export const ALPHA_POR_DEFECTO = 1;
+
 export function validarBusqueda(query) {
   const q = typeof query.q === 'string' ? query.q.trim() : '';
   if (!q) {
     throw new ErrorValidacion('Q_VACIO', 'El parámetro "q" es obligatorio y no puede estar vacío.');
   }
 
-  let alpha = query.alpha === undefined ? 0.65 : Number(query.alpha);
-  if (Number.isNaN(alpha)) alpha = 0.65;
+  let alpha = query.alpha === undefined ? ALPHA_POR_DEFECTO : Number(query.alpha);
+  if (Number.isNaN(alpha)) alpha = ALPHA_POR_DEFECTO;
   alpha = Math.min(1, Math.max(0, alpha)); // clamp, según contrato: nunca error
 
   let limit = query.limit === undefined ? 12 : aEnteroOIndefinido(query.limit);

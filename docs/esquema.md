@@ -201,6 +201,12 @@ bajan de 0.45**. Un corte alrededor de 0.35 separaría ambos grupos. Son tres pa
 calibración: la medición sobre los 20 pares de `datos/pares-republicados.csv` y el reporte de falsos
 positivos es la tarea 3.4 de Alejandro.
 
+> **Resultado de la Fase 3:** el corte de 0.35 no se sostiene en el catálogo completo. Midiendo
+> los 36.846 pares de artículos distintos, el más cercano está a **0.157** (dos consolas de
+> videojuegos de vendedores distintos), y con 0.35 recibirían una insignia falsa 59 publicaciones.
+> La regla vigente combina distancia < 0.29 con misma ciudad y precio a ±20 %: 10 de 10
+> republicaciones y 0 falsas alarmas. Detalle en [`evaluacion.md`](evaluacion.md) §3.
+
 ### Un filtro deliberadamente selectivo para la tarea 3.3
 
 La distribución de `estado` quedó desbalanceada a propósito, como en un clasificado real:
@@ -215,6 +221,12 @@ La distribución de `estado` quedó desbalanceada a propósito, como en un clasi
 Filtrar por `estado = "para repuestos"` deja **1 objeto entre 272**, y `nuevo` deja 3. Es el caso
 extremo que la tarea 3.3 necesita para medir qué le pasa al recall cuando el filtro descarta casi
 todo el índice.
+
+> **Resultado de la Fase 3:** con la tokenización por defecto (`word`), `equal('nuevo')` devuelve
+> **76** objetos, no 3: también trae los 73 "como nuevo", porque compara palabras y no el campo
+> completo. El motor de la API ya lo corrige (`api/src/motor/filtros.js`). Si se vuelve a recrear la
+> colección, conviene declarar `tokenization: 'field'` en `estado`, `ciudad` y `categoria`, como ya
+> se hizo con `codigo` (§3.3). Detalle en [`evaluacion.md`](evaluacion.md) §4.
 
 ---
 

@@ -55,10 +55,25 @@ npm run dev                 # http://localhost:3001
 curl localhost:3001/api/salud
 ```
 
-El contrato de los tres endpoints está en [`docs/contrato-api.md`](docs/contrato-api.md). `/api/buscar`
-y `/api/similares/:codigo` responden todavía con datos fijos que cumplen el contrato, para que el
-frontend se construya en paralelo; los valores de esos *stubs* están copiados de objetos reales ya
-ingestados, así que coinciden con lo que devolverá la búsqueda de verdad.
+El contrato de los tres endpoints está en [`docs/contrato-api.md`](docs/contrato-api.md). Los tres
+responden ya contra el clúster real: los *stubs* de la Fase 2 se reemplazaron por el motor de la
+Fase 3.
+
+### Motor de búsqueda y evaluación (Fase 3)
+
+El motor vive en `api/src/motor/`: `buscar.js` (BM25, híbrido o vectorial según `alpha`, con
+filtros) y `similares.js` (detector de republicaciones). Su evaluación se reproduce desde `/api`:
+
+```bash
+npm test                    # 25 pruebas sin red
+npm run calibrar            # umbral del detector de republicaciones (0 embeddings)
+npm run medir-filtros       # filtros exactos y recall con filtros selectivos (21 embeddings)
+npm run evaluar             # Precision@5 por alpha (50 embeddings)
+```
+
+Resultados y conclusiones en [`docs/evaluacion.md`](docs/evaluacion.md): `alpha` = 1 por defecto, y
+una republicación se marca por distancia < 0.29 + misma ciudad + precio a ±20 %, con 10 de 10
+detectadas y 0 falsas alarmas en los 36.846 pares del catálogo.
 
 ## Estado
 
@@ -66,7 +81,7 @@ ingestados, así que coinciden con lo que devolverá la búsqueda de verdad.
 |---|---|---|
 | 1 — Esquema, limpieza e ingesta | Edwar | **Completa.** 272 publicaciones ingestadas y verificadas; clave de solo lectura creada |
 | 2 — Backend, contrato e infraestructura | Johnatan | Contrato firmado y Express en pie con *stubs* |
-| 3 — Motor de consultas y evaluación | Alejandro | Pendiente |
+| 3 — Motor de consultas y evaluación | Alejandro | **Completa.** `buscar` y `similares` contra el clúster; Precision@5, umbral calibrado y filtros medidos |
 | 4 — Frontend y presentación | David | Pendiente |
 | 5 — Contenerización | David | Pendiente |
 

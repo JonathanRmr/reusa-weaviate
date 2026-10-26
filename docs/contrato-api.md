@@ -4,6 +4,17 @@
 **Estado:** 🔒 Cerrado — cualquier cambio debe acordarse con los cuatro integrantes (ver roadmap, sección 8).
 **Base URL (local/docker):** `http://localhost:3001` · tras nginx (producción/demo): `http://localhost:8080/api`
 
+> **Cambios propuestos por la Fase 3 (Alejandro), pendientes del visto bueno de los cuatro.** No
+> cambian la forma de ninguna respuesta; sí cambian valores. Justificación y cifras en
+> [`docs/evaluacion.md`](evaluacion.md).
+>
+> 1. `alpha` por defecto pasa de `0.65` a **`1`** (evaluación §2).
+> 2. `modo` deja de ser siempre `"hybrid"`: vale `"bm25"`, `"hybrid"` o `"vector"` según `alpha`, y
+>    dice cuál de `score` / `distance` viene lleno.
+> 3. `posibleDuplicado` exige distancia < 0.29 **y** misma ciudad **y** precio a ±20 % (evaluación §3).
+> 4. Los filtros de `categoria`, `ciudad` y `estado` aceptan tildes y mayúsculas; `estado=nuevo` ya no
+>    incluye los "como nuevo". El `:codigo` de `/api/similares` no distingue mayúsculas.
+
 
 
 ---
@@ -36,12 +47,12 @@ Búsqueda híbrida (vectorial + léxica) con filtros.
 | Parámetro | Tipo | Obligatorio | Default | Validación |
 |---|---|---|---|---|
 | `q` | string | sí | — | no vacío tras `trim()` → si falta o vacío: `400 Q_VACIO` |
-| `alpha` | number (0–1) | no | `0.65` | fuera de rango → clamp a [0,1], no error |
-| `categoria` | string | no | — | debe existir en el set cerrado de categorías (ver `/docs/esquema.md`) |
+| `alpha` | number (0–1) | no | `1` | fuera de rango → clamp a [0,1], no error |
+| `categoria` | string | no | — | debe existir en el set cerrado de categorías (ver `/docs/esquema.md`); sin distinguir tildes ni mayúsculas |
 | `precioMin` | number | no | — | entero ≥ 0 |
 | `precioMax` | number | no | — | entero ≥ 0 |
-| `ciudad` | string | no | — | — |
-| `estado` | string | no | — | uno de `nuevo`, `como nuevo`, `usado`, `para repuestos` |
+| `ciudad` | string | no | — | sin distinguir tildes ni mayúsculas (`bogotá` = `Bogota`) |
+| `estado` | string | no | — | uno de `nuevo`, `como nuevo`, `usado`, `para repuestos`; coincidencia exacta |
 | `limit` | number | no | `12` | entero, `1 ≤ limit ≤ 25` → si `limit > 25`: `400 LIMIT_INVALIDO` |
 
 Si `precioMin > precioMax` ambos presentes → `400 RANGO_PRECIO_INVALIDO`.
@@ -72,8 +83,16 @@ Si `precioMin > precioMax` ambos presentes → `400 RANGO_PRECIO_INVALIDO`.
 
 **Nota de contrato (ver roadmap 3.2):** `score` y `distance` **no son comparables entre sí**
 (escalas distintas). El frontend muestra uno u otro según corresponda, nunca ambos como si fueran
-lo mismo. Con `alpha = 0` (BM25 puro) `distance` puede venir `null`; con `alpha = 1` (vectorial
-puro) `score` puede venir `null`. El cliente debe tolerar ambos casos.
+lo mismo. `modo` dice cuál viene lleno; el otro llega en `null`:
+
+| `alpha` | `modo` | Viene lleno | Qué es |
+|---|---|---|---|
+| `0` | `"bm25"` | `score` | BM25 crudo, no acotado (20.7 casi literal, 2.4 flojo) |
+| entre 0 y 1 | `"hybrid"` | `score` | Fusión normalizada en [0, 1] **dentro de cada respuesta** |
+| `1` | `"vector"` | `distance` | Coseno: 0 idéntico, 2 opuesto. **No es un porcentaje** |
+
+En `"hybrid"` la `distance` llega siempre en `null`: Weaviate no la devuelve para el resultado
+fusionado. Con `alpha = 0` la búsqueda no gasta cuota de embeddings.
 
 ---
 
@@ -122,8 +141,10 @@ Detector de republicaciones (F5). Dado el código de una publicación, devuelve 
 }
 ```
 
-`posibleDuplicado` lo calcula el backend comparando `distance` contra el umbral calibrado en la
-Fase 3 (roadmap 3.4) — el frontend solo pinta la insignia, no decide el umbral.
+`posibleDuplicado` lo calcula el backend con la regla calibrada en la Fase 3 (roadmap 3.4): distancia
+< 0.29 **y** misma ciudad que la base **y** precio a ±20 %. La distancia sola no basta: dos
+artículos distintos del mismo tipo pueden quedar a 0.157 (ver `docs/evaluacion.md` §3). El frontend
+solo pinta la insignia, no decide la regla; un vecino muy cercano **sin** insignia es correcto.
 
 ---
 

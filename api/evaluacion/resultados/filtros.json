@@ -1,0 +1,314 @@
+{
+  "generado": "2026-10-26T00:57:45.495Z",
+  "limite": 12,
+  "integridad": [
+    {
+      "filtro": "estado = nuevo",
+      "esperado": 3,
+      "ingenuo": 76,
+      "api": 3
+    },
+    {
+      "filtro": "estado = como nuevo",
+      "esperado": 73,
+      "ingenuo": 73,
+      "api": 73
+    },
+    {
+      "filtro": "estado = usado",
+      "esperado": 195,
+      "ingenuo": 195,
+      "api": 195
+    },
+    {
+      "filtro": "estado = para repuestos",
+      "esperado": 1,
+      "ingenuo": 1,
+      "api": 1
+    },
+    {
+      "filtro": "ciudad = Duitama",
+      "esperado": 15,
+      "ingenuo": null,
+      "api": 15
+    },
+    {
+      "filtro": "electrodomesticos y precio ≤ 150.000",
+      "esperado": 16,
+      "ingenuo": null,
+      "api": 16
+    },
+    {
+      "filtro": "precio ≤ 50.000",
+      "esperado": 12,
+      "ingenuo": null,
+      "api": 12
+    },
+    {
+      "filtro": "precio ≥ 2.000.000",
+      "esperado": 6,
+      "ingenuo": null,
+      "api": 6
+    },
+    {
+      "filtro": "ciudad = \"bogotá\" (tal como la teclea un usuario)",
+      "esperado": 75,
+      "ingenuo": 0,
+      "api": 75
+    }
+  ],
+  "medidas": [
+    {
+      "q": "algo para calentar la sala",
+      "caso": "sin filtro",
+      "referenciaCompleta": true,
+      "cumplen": 272,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.5915392637252808
+    },
+    {
+      "q": "algo para calentar la sala",
+      "caso": "ciudad = Duitama",
+      "referenciaCompleta": true,
+      "cumplen": 15,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.7487585544586182
+    },
+    {
+      "q": "algo para calentar la sala",
+      "caso": "electrodomesticos y precio ≤ 150.000",
+      "referenciaCompleta": true,
+      "cumplen": 16,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.6722319722175598
+    },
+    {
+      "q": "algo para calentar la sala",
+      "caso": "precio ≤ 50.000",
+      "referenciaCompleta": true,
+      "cumplen": 12,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.7487585544586182
+    },
+    {
+      "q": "algo para calentar la sala",
+      "caso": "precio ≥ 2.000.000",
+      "referenciaCompleta": true,
+      "cumplen": 6,
+      "esperados": 6,
+      "obtenidos": 6,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.8169029951095581
+    },
+    {
+      "q": "algo para calentar la sala",
+      "caso": "estado = nuevo",
+      "referenciaCompleta": true,
+      "cumplen": 3,
+      "esperados": 3,
+      "obtenidos": 3,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.8655973076820374
+    },
+    {
+      "q": "algo para calentar la sala",
+      "caso": "estado = para repuestos",
+      "referenciaCompleta": true,
+      "cumplen": 1,
+      "esperados": 1,
+      "obtenidos": 1,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.8218809366226196
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "caso": "sin filtro",
+      "referenciaCompleta": true,
+      "cumplen": 272,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.5134521722793579
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "caso": "ciudad = Duitama",
+      "referenciaCompleta": true,
+      "cumplen": 15,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.6253691911697388
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "caso": "electrodomesticos y precio ≤ 150.000",
+      "referenciaCompleta": true,
+      "cumplen": 16,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.7431231141090393
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "caso": "precio ≤ 50.000",
+      "referenciaCompleta": true,
+      "cumplen": 12,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.6087957620620728
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "caso": "precio ≥ 2.000.000",
+      "referenciaCompleta": true,
+      "cumplen": 6,
+      "esperados": 6,
+      "obtenidos": 6,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.8787643313407898
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "caso": "estado = nuevo",
+      "referenciaCompleta": true,
+      "cumplen": 3,
+      "esperados": 3,
+      "obtenidos": 3,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.8666910529136658
+    },
+    {
+      "q": "mueble para guardar ropa",
+      "caso": "estado = para repuestos",
+      "referenciaCompleta": true,
+      "cumplen": 1,
+      "esperados": 1,
+      "obtenidos": 1,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.9900038242340088
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "caso": "sin filtro",
+      "referenciaCompleta": true,
+      "cumplen": 272,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.7676337957382202
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "caso": "ciudad = Duitama",
+      "referenciaCompleta": true,
+      "cumplen": 15,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.7828214168548584
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "caso": "electrodomesticos y precio ≤ 150.000",
+      "referenciaCompleta": true,
+      "cumplen": 16,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.8663981556892395
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "caso": "precio ≤ 50.000",
+      "referenciaCompleta": true,
+      "cumplen": 12,
+      "esperados": 12,
+      "obtenidos": 12,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.8581939935684204
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "caso": "precio ≥ 2.000.000",
+      "referenciaCompleta": true,
+      "cumplen": 6,
+      "esperados": 6,
+      "obtenidos": 6,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.9169579744338989
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "caso": "estado = nuevo",
+      "referenciaCompleta": true,
+      "cumplen": 3,
+      "esperados": 3,
+      "obtenidos": 3,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.9195891618728638
+    },
+    {
+      "q": "para trabajar desde la casa",
+      "caso": "estado = para repuestos",
+      "referenciaCompleta": true,
+      "cumplen": 1,
+      "esperados": 1,
+      "obtenidos": 1,
+      "recall": 1,
+      "mismoOrden": true,
+      "perdidos": [],
+      "distanciaPrimero": 0.9656736850738525
+    }
+  ]
+}
