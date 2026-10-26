@@ -36,10 +36,21 @@ services:
     # api NO expone puertos al exterior; solo es accesible internamente por Nginx (Roadmap 5.3)
     environment:
       - PORT=3001
-      - WEAVIATE_URL=${WEAVIATE_URL:-http://weaviate:8080}
-      - WEAVIATE_API_KEY=${WEAVIATE_API_KEY:-reusa-solo-lectura}
+      # Credenciales del perfil "nube" escritas aqui a proposito (Roadmap 5.1): el
+      # evaluador clona y ejecuta, sin crear cuentas ni editar archivos. La clave NO
+      # es la de administrador: pertenece al rol `reusa-solo-lectura`, que solo tiene
+      # permiso de read_collections y read_data sobre la coleccion Publicacion. No
+      # puede escribir, ni borrar, ni crear colecciones; esta comprobado con
+      # `npm run probar-lectura` en /ingesta. Se rota despues de la sustentacion.
+      # Un .env en la raiz, si existe, tiene prioridad sobre estos valores.
+      - WEAVIATE_URL=${WEAVIATE_URL:-https://poqaamqseow6nri9vdffa.c0.us-east-1.aws.weaviate.cloud}
+      - WEAVIATE_API_KEY=${WEAVIATE_API_KEY:-ODlZWS9vN1RXUFhJQjJDbF9hWE9maVN3MkR5RERTZC9LRzM0RDZyaUdwRmI2YXZsekFGbTYzQ3kraWdJPV92MjAw}
       - CORS_ORIGIN=*
     healthcheck:
+      # 127.0.0.1 y no localhost: dentro del contenedor, localhost resuelve primero a
+      # IPv6 (::1) y Express escucha en 0.0.0.0, que es solo IPv4. Con localhost el
+      # healthcheck da "connection refused" aunque la API este respondiendo, el
+      # contenedor queda unhealthy y web nunca arranca.
       test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://127.0.0.1:3001/api/salud || exit 1"]
       interval: 5s
       timeout: 5s

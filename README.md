@@ -12,6 +12,9 @@ El manual de usuario de la aplicación está en [`docs/manual.md`](docs/manual.m
 
 ## Para evaluar este proyecto
 
+Solo hace falta **Docker con Compose v2** (`docker compose version`). No hay que crear cuentas, ni
+pedir credenciales, ni editar ningún archivo.
+
 ### Opción 1 — un comando (recomendada)
 
 ```bash
@@ -20,19 +23,55 @@ docker compose up
 
 Abrir **http://localhost:8080**
 
+La primera vez construye las imágenes: unos 2–4 minutos según la conexión. Está listo cuando la
+consola muestra `Container reusa-api  Healthy` seguido de `Container reusa-web  Started`.
+
+**Cómo saber que funcionó:** en la esquina superior derecha de la página, el indicador debe estar
+en verde y decir **272 objetos indexados**. Si prefiere comprobarlo sin abrir el navegador:
+
+```bash
+curl localhost:8080/api/salud
+# {"weaviate":true,"objetos":272}
+```
+
+Para apagarlo: `Ctrl+C`, y `docker compose down` para eliminar los contenedores.
+
+> **Si el puerto 8080 está ocupado** en su máquina, cambie `"8080:80"` por `"9090:80"` en el
+> servicio `web` del `docker-compose.yml` y abra http://localhost:9090.
+
+> **Sobre la credencial incluida en el repositorio:** el `docker-compose.yml` trae la URL del clúster
+> y una API key para que esto funcione sin configuración. **No es la clave de administrador.**
+> Pertenece a un rol RBAC con dos permisos de lectura sobre la colección `Publicacion`: no puede
+> escribir, ni borrar, ni crear colecciones. Está comprobado con una prueba automatizada
+> (`npm run probar-lectura`, ver [`docs/esquema.md`](docs/esquema.md) §5) y se rota tras la
+> sustentación.
+
 ### Opción 2 — sin internet ni cuentas
 
 ```bash
 docker compose --profile local up
 ```
 
-*(La primera vez descarga ~1 GB del modelo de embeddings; esperar al mensaje de salud de la API listo para recibir consultas).*
+Levanta un Weaviate propio con su modelo de embeddings, ingesta los datos y arranca la aplicación,
+todo en la máquina del evaluador. **La primera vez descarga alrededor de 1 GB** del modelo y la
+ingesta de las 272 publicaciones en CPU tarda varios minutos. Es el respaldo para una sala sin
+conexión, no el camino recomendado: el modelo local es distinto al de la nube, así que las
+distancias no coinciden con las que reporta el informe.
 
 ### Consultas sugeridas para probar
 
-- `"algo para calentar la sala"` → el deslizador a la izquierda (BM25) no encuentra nada relevante (trae alfombras); a la derecha (Vectorial α=1) sí encuentra los calefactores.
-- `"mueble para guardar ropa"` → BM25 devuelve un mueble de televisión; el vector ubica el armario en madera en primer lugar a distancia 0.513.
-- `"iPhone 13 Pro Max"` → ambos algoritmos lo ubican en las primeras posiciones por coincidencia del modelo exacto.
+- `"mueble para guardar ropa"` → con el deslizador a la izquierda (palabras exactas) no aparece el
+  armario; a la derecha (significado) sale **primero**, a distancia 0.513, aunque su título no
+  contiene ninguna de esas palabras tal como las escribió el comprador. Es el contraste más limpio
+  entre búsqueda léxica y semántica.
+- `"algo para calentar la sala"` → con palabras exactas trae alfombras; con significado aparecen los
+  calefactores. Aparecen en segundo y tercer lugar: el primero es una *pistola de calor*, un vecino
+  semántico legítimo que el modelo no distingue de la calefacción de ambiente. Es un límite real y
+  está explicado en [`docs/informe-datos.md`](docs/informe-datos.md) §4.
+- `"iPhone 13 Pro Max"` → aquí las palabras exactas rinden igual de bien, porque el comprador ya sabe
+  el nombre del producto. Es el contraejemplo que justifica ofrecer el deslizador completo.
+- Abrir cualquier publicación y mirar la franja de **parecidos**: las republicaciones del mismo
+  artículo aparecen marcadas con su distancia.
 
 ---
 
